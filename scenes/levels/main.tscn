@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c8051jbdx23f4"]
+
+[ext_resource type="PackedScene" uid="uid://bxy4f7q8b8gvg" path="res://scenes/player/player.tscn" id="1_72ix8"]
+[ext_resource type="PackedScene" uid="uid://j8oid6igl4as" path="res://scenes/interacables/test_interactable.tscn" id="2_2vj2h"]
+
+[node name="main" type="Node2D" unique_id=815914131]
+
+[node name="Player" parent="." unique_id=1666149047 instance=ExtResource("1_72ix8")]
+position = Vector2(531, 372)
+
+[node name="TestInteractable" parent="." unique_id=1816552023 instance=ExtResource("2_2vj2h")]
+position = Vector2(702, 428)
+
+[node name="TestInteractable2" parent="." unique_id=901661240 instance=ExtResource("2_2vj2h")]
+position = Vector2(917, 428)
+
+[node name="TestInteractable3" parent="." unique_id=562717954 instance=ExtResource("2_2vj2h")]
+position = Vector2(308, 428)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://1dwn7aer4lse"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_nlhix"]
+[ext_resource type="Texture2D" uid="uid://ugni0dd630kj" path="res://assets/characters/chara.jpg" id="2_odciu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vrem"]
+size = Vector2(100, 100)
+
+[node name="Interactable" unique_id=1816552023 instance=ExtResource("1_nlhix")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_3vrem")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_odciu")

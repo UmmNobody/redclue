@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxldtmtmrkvpx"]
+
+[ext_resource type="Script" uid="uid://bn4ulxg5cxkfs" path="res://scripts/interaction/interactable.gd" id="1_70egc"]
+[ext_resource type="Shader" uid="uid://810fsnuad4hw" path="res://shaders/interact_outline.gdshader" id="2_i4nnn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_70egc"]
+shader = ExtResource("2_i4nnn")
+shader_parameter/outline_enabled = false
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[node name="Interactable" type="Area2D" unique_id=1816552023 groups=["Interactable"]]
+collision_layer = 4
+script = ExtResource("1_70egc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=783111100]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=523219159]
+material = SubResource("ShaderMaterial_70egc")
