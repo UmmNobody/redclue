@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://de52mv5g16w1x"]
+
+[ext_resource type="Script" uid="uid://cxwewhqu4ubaj" path="res://scenes/ui/notebook.gd" id="1_r52nq"]
+
+[node name="Notebook" type="Control" unique_id=1031771591]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_r52nq")
+
+[node name="QuestPage" type="Control" parent="." unique_id=1148532462]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuestTitle" type="Label" parent="QuestPage" unique_id=1247094738]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 350.0
+offset_top = 144.0
+offset_right = 762.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "QuestTitle"
+vertical_alignment = 1
+
+[node name="QuestDescription" type="Label" parent="QuestPage" unique_id=230797620]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 335.0
+offset_top = 204.0
+offset_right = 778.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "QuestDescription"
+
+[node name="ObjectiveList" type="VBoxContainer" parent="QuestPage" unique_id=659146985]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 335.0
+offset_top = 278.5
+offset_right = 777.0
+offset_bottom = 329.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EvidencePage" type="Control" parent="." unique_id=2043309386]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="EvidenceGrid" type="GridContainer" parent="EvidencePage" unique_id=1281605744]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -180.0
+offset_right = 200.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="PreviousButton" type="Button" parent="EvidencePage" unique_id=281303355]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -244.0
+offset_top = 219.0
+offset_right = -169.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Previous"
+
+[node name="NextButton" type="Button" parent="EvidencePage" unique_id=650639645]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 155.0
+offset_top = 219.0
+offset_right = 254.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "NextButton"
+
+[node name="PageLabel" type="Label" parent="EvidencePage" unique_id=1081186492]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = 223.0
+offset_right = 97.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PageLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="." unique_id=79951618]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -609.0
+offset_right = -44.0
+offset_bottom = -556.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Close"
+
+[node name="QuestTab" type="Button" parent="." unique_id=1223330550]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 92.0
+offset_right = 376.0
+offset_bottom = 123.0
+text = "Quest"
+
+[node name="EvidenceTab" type="Button" parent="." unique_id=602224123]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 92.0
+offset_right = 521.0
+offset_bottom = 123.0
+text = "Evidence"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

@@ -2,17 +2,22 @@
 
 [ext_resource type="PackedScene" uid="uid://bxy4f7q8b8gvg" path="res://scenes/player/player.tscn" id="1_72ix8"]
 [ext_resource type="PackedScene" uid="uid://j8oid6igl4as" path="res://scenes/interacables/test_interactable.tscn" id="2_2vj2h"]
+[ext_resource type="PackedScene" uid="uid://de52mv5g16w1x" path="res://scenes/ui/notebook.tscn" id="3_y0acb"]
+[ext_resource type="PackedScene" uid="uid://d31vckssxsicx" path="res://scenes/interacables/do_quest.tscn" id="4_j4d2a"]
+[ext_resource type="PackedScene" uid="uid://d1tqf738dvn76" path="res://scenes/triggers/event_trigger.tscn" id="5_u81e1"]
 
 [node name="main" type="Node2D" unique_id=815914131]
 
 [node name="Player" parent="." unique_id=1666149047 instance=ExtResource("1_72ix8")]
-position = Vector2(531, 372)
+position = Vector2(527, 305)
 
 [node name="TestInteractable" parent="." unique_id=1816552023 instance=ExtResource("2_2vj2h")]
-position = Vector2(702, 428)
+position = Vector2(685, 407)
 
-[node name="TestInteractable2" parent="." unique_id=901661240 instance=ExtResource("2_2vj2h")]
-position = Vector2(917, 428)
+[node name="doquest" parent="." unique_id=1453247374 instance=ExtResource("4_j4d2a")]
+position = Vector2(316, 403)
 
-[node name="TestInteractable3" parent="." unique_id=562717954 instance=ExtResource("2_2vj2h")]
-position = Vector2(308, 428)
+[node name="Notebook" parent="." unique_id=1031771591 instance=ExtResource("3_y0acb")]
+
+[node name="EventTrigger" parent="." unique_id=160060719 instance=ExtResource("5_u81e1")]
+position = Vector2(887, 398)

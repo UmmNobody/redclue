@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bop3pf4n11s76"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_ippq4"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_rxk6s"]
+
+[sub_resource type="Resource" id="Resource_lx0jh"]
+script = ExtResource("1_ippq4")
+objective_id = "talk_to_police1"
+description = "พูดคุยกับตำรวจ"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[sub_resource type="Resource" id="Resource_y0acb"]
+script = ExtResource("1_ippq4")
+objective_id = "talk_to_police2"
+description = "สำรวจพื้นที่รอบๆ"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_rxk6s")
+quest_id = "talk_to_police"
+quest_name = "พบกับตำรวจ"
+description = "เดินทางไปที่สน. และพูดคุยกับผู้หมวด"
+objectives = Array[ExtResource("1_ippq4")]([SubResource("Resource_lx0jh"), SubResource("Resource_y0acb")])
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

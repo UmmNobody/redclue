@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d1tqf738dvn76"]
+
+[ext_resource type="Script" uid="uid://dtmt1qfngm5nd" path="res://scripts/triggers/event_triggers.gd" id="1_4632n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vrem"]
+size = Vector2(111, 115)
+
+[node name="EventTrigger" type="Area2D" unique_id=160060719]
+script = ExtResource("1_4632n")
+required_quest_id = "talk_to_police"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=21895147]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_3vrem")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

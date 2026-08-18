@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Evidence" format=3 uid="uid://br8pj1jr8w36y"]
+
+[ext_resource type="Script" uid="uid://cje680fcrh0bk" path="res://scripts/evidence/evidence.gd" id="1_1all5"]
+[ext_resource type="Texture2D" uid="uid://ugni0dd630kj" path="res://assets/characters/chara.jpg" id="1_b41nm"]
+
+[resource]
+script = ExtResource("1_1all5")
+evidence_id = "c_01"
+evidence_name = "Blood Sample"
+description = "ตัวอย่างเลือดจากสถานที่เกิดเหตุ"
+image = ExtResource("1_b41nm")
+metadata/_custom_type_script = "uid://cje680fcrh0bk"

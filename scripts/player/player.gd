@@ -4,17 +4,17 @@ extends CharacterBody2D
 @export var move_speed: float = 200.0
 
 var facing_direction: int = 1
-# 1  = Right
-# -1 = Left
+var can_move: bool = true
 
 func _physics_process(_delta: float) -> void:
-	handle_movement()
+	if can_move:
+		handle_movement()
+	else:
+		velocity.x = 0
 	move_and_slide()
 
-# =========================================
-# Movement
-# =========================================
 
+# Movement
 func handle_movement() -> void:
 	var direction := Input.get_axis(
 		"move_left",
@@ -32,10 +32,7 @@ func handle_movement() -> void:
 		)
 
 
-# =========================================
 # Facing Direction
-# =========================================
-
 func update_facing_direction(direction: float) -> void:
 	if direction > 0:
 		facing_direction = 1
@@ -45,9 +42,13 @@ func update_facing_direction(direction: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 
 
-# =========================================
 # Get Facing Direction
-# =========================================
-
 func get_facing_direction() -> int:
 	return facing_direction
+
+# Movement Control
+func set_movement_enabled(enabled: bool) -> void:
+	can_move = enabled
+
+	if not enabled:
+		velocity.x = 0

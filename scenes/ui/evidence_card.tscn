@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c4brohe0k4386"]
+
+[ext_resource type="Script" uid="uid://dkgpj3hw5hwel" path="res://scenes/ui/evidence_card.gd" id="1_jvltu"]
+
+[node name="EvidenceCard" type="Panel" unique_id=333662350]
+custom_minimum_size = Vector2(230, 250)
+offset_right = 230.0
+offset_bottom = 250.0
+scale = Vector2(3.6017458, 3.975545)
+script = ExtResource("1_jvltu")
+
+[node name="EvidenceImage" type="TextureRect" parent="." unique_id=712936455]
+custom_maximum_size = Vector2(180, 180)
+layout_mode = 0
+offset_left = 23.87731
+offset_top = 13.079968
+offset_right = 203.8773
+offset_bottom = 133.07997
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EvidenceName" type="Label" parent="." unique_id=1398566151]
+layout_mode = 0
+offset_left = -33.59482
+offset_top = 179.34648
+offset_right = 271.25735
+offset_bottom = 224.34648
+theme_override_font_sizes/font_size = 24
+text = "EvidenceName"
+horizontal_alignment = 1
+vertical_alignment = 1
