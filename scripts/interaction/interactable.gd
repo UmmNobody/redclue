@@ -9,34 +9,60 @@ extends Area2D
 
 var is_highlighted: bool = false
 
+
 func _ready() -> void:
 	sprite.material = sprite.material.duplicate()
 
-# interact function
+
+# =========================================================
+# Interact
+# =========================================================
+
 func interact(player: CharacterBody2D) -> void:
-	if can_interact():
-		start_valid_interaction()
-	else:
-		start_invalid_interaction()
+	var quest_state := get_quest_state()
 
-func start_valid_interaction():
-	print("valid interactrion : " + name)
-	
-func start_invalid_interaction():
-	print("invalid interactrion : " + name)
+	match quest_state:
+		QuestManager.QuestState.NOT_STARTED:
+			start_not_started_interaction()
 
-func can_interact() -> bool:
+		QuestManager.QuestState.ACTIVE:
+			start_active_interaction()
+
+		QuestManager.QuestState.COMPLETED:
+			start_completed_interaction()
+
+
+func get_quest_state() -> QuestManager.QuestState:
 	if required_quest_id.is_empty():
-		return true
+		return QuestManager.QuestState.ACTIVE
 
-	return QuestManager.current_quest != null \
-		and QuestManager.current_quest.quest_id == required_quest_id
+	return QuestManager.get_quest_state(required_quest_id)
 
-func ended():
+
+func start_not_started_interaction() -> void:
+	print("not started interaction : " + name)
+	# Override me
+
+func start_active_interaction() -> void:
+	print("active interaction : " + name)
+	# Override me
+
+func start_completed_interaction() -> void:
+	print("completed interaction : " + name)
+	# Override me
+
+func ended() -> void:
 	Dialogic.timeline_ended.disconnect(ended)
 	player.set_movement_enabled(true)
+	# Override me
 
-# highlight function
+func set_start_dialogue() -> void:
+	player.set_movement_enabled(false)
+	Dialogic.timeline_ended.connect(ended)
+
+# =========================================================
+# Highlight
+# =========================================================
 
 func set_highlight(enabled: bool) -> void:
 	var material := sprite.material as ShaderMaterial

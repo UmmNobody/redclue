@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Evidence" format=3 uid="uid://bl5h2hljixudx"]
+
+[ext_resource type="Texture2D" uid="uid://cdtoq6lq3lewn" path="res://assets/evidences_png/c_9.png" id="1_amcfr"]
+[ext_resource type="Script" uid="uid://cje680fcrh0bk" path="res://scripts/evidence/evidence.gd" id="2_t0xhe"]
+
+[resource]
+script = ExtResource("2_t0xhe")
+evidence_id = "C9"
+evidence_name = "หลักฐานชิ้นที่ 9"
+description = "หลักฐานชิ้นที่ 9 ..."
+image = ExtResource("1_amcfr")
+metadata/_custom_type_script = "uid://cje680fcrh0bk"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://ckis464makxwr"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_5ntf5"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_estoe"]
+
+[sub_resource type="Resource" id="Resource_bvgcm"]
+script = ExtResource("1_5ntf5")
+objective_id = "meet_enmund_1"
+description = "เดินทางไปโรงงานเก่า"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_estoe")
+quest_id = "meet_enmund"
+quest_name = "ไปหา Enmund"
+description = "เดินทางไปยังโรงงานเก่าของ Weiss Industrial. Holm บอกว่า Enmund รออยู่ที่นั้นแล้ว"
+objectives = Array[ExtResource("1_5ntf5")]([SubResource("Resource_bvgcm")])
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

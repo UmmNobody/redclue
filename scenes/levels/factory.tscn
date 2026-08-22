@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nhpgefr4dti1"]
+
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_0ug24"]
+[ext_resource type="Texture2D" uid="uid://y8n0pjrwv4ht" path="res://assets/maps/fac_f1.png" id="2_0kexd"]
+
+[node name="FactoryLevel" type="Node2D" unique_id=1859534269]
+
+[node name="FacF1" type="Sprite2D" parent="." unique_id=1267190507]
+position = Vector2(874, -237)
+texture = ExtResource("2_0kexd")
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_0ug24")]
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=1453308529]
+position = Vector2(320, -211)

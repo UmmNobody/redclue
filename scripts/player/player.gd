@@ -36,10 +36,10 @@ func handle_movement() -> void:
 func update_facing_direction(direction: float) -> void:
 	if direction > 0:
 		facing_direction = 1
-		$AnimatedSprite2D.flip_h = false
+		$Sprite2D.flip_h = false
 	elif direction < 0:
 		facing_direction = -1
-		$AnimatedSprite2D.flip_h = true
+		$Sprite2D.flip_h = true
 
 
 # Get Facing Direction

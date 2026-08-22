@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://42rbxq73sos"]
+
+[ext_resource type="Texture2D" uid="uid://cgcb2mb133ayx" path="res://assets/maps/office.png" id="1_uw80i"]
+[ext_resource type="PackedScene" uid="uid://1s54wau3vd4k" path="res://scenes/interacables/sofa.tscn" id="2_ey3sf"]
+[ext_resource type="PackedScene" uid="uid://bqey8mvoprmqf" path="res://scenes/interacables/telephone.tscn" id="3_1gkrr"]
+[ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_4m8q4"]
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="5_tuhfx"]
+
+[node name="Office" type="Node2D" unique_id=1580521500]
+
+[node name="Office" type="Sprite2D" parent="." unique_id=2137355171]
+position = Vector2(299, -114)
+texture = ExtResource("1_uw80i")
+
+[node name="Interactables" type="Node2D" parent="." unique_id=1039905659]
+
+[node name="Sofa" parent="Interactables" unique_id=1816552023 instance=ExtResource("2_ey3sf")]
+position = Vector2(260, -95)
+
+[node name="telephone" parent="Interactables" unique_id=1246797705 instance=ExtResource("3_1gkrr")]
+position = Vector2(356, -105)
+
+[node name="office_door" parent="Interactables" unique_id=1876554291 instance=ExtResource("4_4m8q4")]
+position = Vector2(511, -99)
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("5_tuhfx")]
+position = Vector2(0, -180)
+
+[node name="InitialPlayerSpawn" type="Marker2D" parent="." unique_id=1664520335]
+position = Vector2(160, -90)
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=101725155]
+position = Vector2(490, -90)

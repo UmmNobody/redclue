@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://1s54wau3vd4k"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_qxwv3"]
+[ext_resource type="Script" uid="uid://dgpqwl5muckmi" path="res://scripts/interaction/sofa.gd" id="2_kljgh"]
+[ext_resource type="Texture2D" uid="uid://cspwjws2fnl5n" path="res://assets/interactable_png/office_interact_png/sofa.png" id="2_mb1l3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofdu6"]
+size = Vector2(74, 17)
+
+[node name="Sofa" unique_id=1816552023 instance=ExtResource("1_qxwv3")]
+script = ExtResource("2_kljgh")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_ofdu6")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_mb1l3")

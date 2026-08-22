@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://byjcewwe20r31"]
+
+[ext_resource type="Script" uid="uid://csar4h2be3vcs" path="res://scripts/ui/teleport_location_button.gd" id="1_cegrh"]
+[ext_resource type="Script" uid="uid://bw68j4rpp13on" path="res://scripts/ui/teleport_ui.gd" id="1_w0kvl"]
+
+[node name="TeleportUi" type="Control" unique_id=671122715 groups=["TeleportUI"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_w0kvl")
+
+[node name="Map" type="TextureRect" parent="." unique_id=500782332]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 310.0
+offset_bottom = 170.0
+
+[node name="Title" type="Label" parent="Map" unique_id=256440292]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OfficeButton" type="Button" parent="Map" unique_id=1053975755]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 39.0
+offset_right = 86.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 8
+text = "Office"
+script = ExtResource("1_cegrh")
+location_id = "office"
+
+[node name="FactoryButton" type="Button" parent="Map" unique_id=380369724]
+layout_mode = 0
+offset_left = 186.0
+offset_top = 48.0
+offset_right = 223.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 8
+text = "Factory"
+script = ExtResource("1_cegrh")
+location_id = "factory"
+
+[node name="CloseButton" type="Button" parent="." unique_id=1559802365]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 8
+text = "Close"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

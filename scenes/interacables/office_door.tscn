@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7va0xckoknlo"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_xlng6"]
+[ext_resource type="Texture2D" uid="uid://bxvwqdocdwfb0" path="res://assets/interactable_png/office_interact_png/office_door.png" id="2_qh5eo"]
+[ext_resource type="Script" uid="uid://bjh6lv2mc2hv7" path="res://scripts/interaction/office_door.gd" id="2_x8ks0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwrw0"]
+size = Vector2(13, 44)
+
+[node name="office_door" unique_id=1816552023 instance=ExtResource("1_xlng6")]
+script = ExtResource("2_x8ks0")
+required_quest_id = "meet_enmund"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_wwrw0")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_qh5eo")

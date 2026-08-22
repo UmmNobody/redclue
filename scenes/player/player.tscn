@@ -1,115 +1,27 @@
 [gd_scene format=3 uid="uid://bxy4f7q8b8gvg"]
 
 [ext_resource type="Script" uid="uid://b2b208am4rhfx" path="res://scripts/player/player.gd" id="1_8afob"]
-[ext_resource type="Texture2D" uid="uid://cohwti25028pw" path="res://assets/sprites/player_walk.png" id="2_dovo2"]
-[ext_resource type="Shader" uid="uid://810fsnuad4hw" path="res://shaders/interact_outline.gdshader" id="2_lvxji"]
+[ext_resource type="Texture2D" uid="uid://cat7uisdyafug" path="res://assets/characters/player.png" id="2_gmlin"]
 [ext_resource type="Script" uid="uid://dtvmanp42n2w5" path="res://scripts/player/interaction_detector.gd" id="3_gmlin"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvxji"]
-shader = ExtResource("2_lvxji")
-shader_parameter/outline_enabled = true
-shader_parameter/outline_color = Color(0.99215686, 0.84705883, 0.20784314, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gmlin"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lvxji"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p47bc"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_75vfm"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0owmy"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qek5x"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5gtgg"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h17s1"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(896, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_je7p5"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(1024, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fm80t"]
-atlas = ExtResource("2_dovo2")
-region = Rect2(1152, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_3vrem"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gmlin")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lvxji")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p47bc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_75vfm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0owmy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qek5x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5gtgg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h17s1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_je7p5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fm80t")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 10.0
-}]
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gx1jg"]
-radius = 14.0
-height = 134.0
+radius = 6.0
+height = 28.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1666149047 groups=["Player"]]
 collision_mask = 5
 script = ExtResource("1_8afob")
+move_speed = 100.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1598592299]
-texture_filter = 1
-material = SubResource("ShaderMaterial_lvxji")
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_3vrem")
-autoplay = "default"
-frame_progress = 0.10522135
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1409171877]
+texture = ExtResource("2_gmlin")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2048811573]
-position = Vector2(-11, 63)
+rotation = 0.0027389682
 shape = SubResource("CapsuleShape2D_gx1jg")
 
 [node name="InteractionOrigin" type="Marker2D" parent="." unique_id=1633486646]
 
 [node name="InteractionDetector" type="Node2D" parent="." unique_id=1163047318]
 script = ExtResource("3_gmlin")
-interaction_range = 150.0
+interaction_range = 30.0
