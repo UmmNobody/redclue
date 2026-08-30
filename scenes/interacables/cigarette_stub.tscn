@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4frxttmw8kl1"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_t0v1y"]
+[ext_resource type="Texture2D" uid="uid://w68a3qx8cbws" path="res://assets/interactable_png/factory_interact_png/cigarette_stub.png" id="2_2sdu2"]
+[ext_resource type="Script" uid="uid://byl70ibvdy6jl" path="res://scripts/interaction/cigarette_stub.gd" id="2_skmpm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpebr"]
+
+[node name="cigarette_stub" unique_id=1816552023 instance=ExtResource("1_t0v1y")]
+script = ExtResource("2_skmpm")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_bpebr")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_2sdu2")

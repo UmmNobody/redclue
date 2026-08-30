@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ci7xtdbv00cis"]
+
+[ext_resource type="PackedScene" uid="uid://d1tqf738dvn76" path="res://scenes/triggers/event_trigger.tscn" id="1_ok1nn"]
+[ext_resource type="Script" uid="uid://24knvwx0apl1" path="res://scripts/triggers/meet_enmund_trigger.gd" id="2_odems"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4632n"]
+size = Vector2(68.36558, 68)
+
+[node name="meet_enmund_trigger" unique_id=160060719 instance=ExtResource("1_ok1nn")]
+script = ExtResource("2_odems")
+required_quest_id = "meet_enmund"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=21895147]
+scale = Vector2(0.5199985, 1)
+shape = SubResource("RectangleShape2D_4632n")

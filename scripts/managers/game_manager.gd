@@ -1,5 +1,7 @@
 extends Node
 
+signal room_changed
+
 var phone_ring_played: bool = false
 
 # Teleport

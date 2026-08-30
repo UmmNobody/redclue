@@ -146,13 +146,11 @@ func _check_quest_completed(quest_id: String) -> void:
 	completed_quests[quest_id] = quest
 
 	active_quests.erase(quest_id)
-	objective_states.erase(quest_id)
 
 	if current_quest == quest:
 		current_quest = null
 
 	quest_completed.emit(quest)
-
 
 # =========================================================
 # Get Functions

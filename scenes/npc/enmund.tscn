@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxmk51t4dmurf"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_lmcbj"]
+[ext_resource type="Script" uid="uid://copd2vqcd7wvi" path="res://scripts/npc/enmund.gd" id="2_lmcbj"]
+[ext_resource type="Texture2D" uid="uid://83pywyhtiy8a" path="res://assets/interactable_png/factory_interact_png/enmund.png" id="3_e64sn"]
+[ext_resource type="Script" uid="uid://b2lp1x00hqruo" path="res://scripts/npc/npc_position_controller.gd" id="4_j7obc"]
+[ext_resource type="Script" uid="uid://e384bbh4nxsk" path="res://scripts/npc/npc_quest_position.gd" id="5_e64sn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4632n"]
+size = Vector2(11, 30)
+
+[node name="enmund" unique_id=1816552023 instance=ExtResource("1_lmcbj")]
+script = ExtResource("2_lmcbj")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_4632n")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("3_e64sn")
+
+[node name="NPCPositionController" type="Node" parent="." index="2" unique_id=418644336]
+script = ExtResource("4_j7obc")
+
+[node name="QuestPosition_01" type="Node" parent="NPCPositionController" index="0" unique_id=1806476944]
+script = ExtResource("5_e64sn")
+
+[node name="QuestPosition_02" type="Node" parent="NPCPositionController" index="1" unique_id=918821826]
+script = ExtResource("5_e64sn")

@@ -72,6 +72,7 @@ func update_target() -> void:
 			current_target.set_highlight(true)
 		
 		target_changed.emit(current_target)
+		print("Interactable found: ", current_target)
 
 # =========================================
 # Interact

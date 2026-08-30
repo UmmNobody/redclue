@@ -21,6 +21,5 @@ func start_completed_interaction() -> void:
 func ended() -> void:
 	Dialogic.timeline_ended.disconnect(ended)
 	QuestManager.start_quest("meet_enmund")
-	EvidenceManager.unlock_evidence("C1")
 	player.set_movement_enabled(true)
 	# Override me

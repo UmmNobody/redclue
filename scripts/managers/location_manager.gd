@@ -9,6 +9,9 @@ var locations: Dictionary = {
 	"factory": {
 		"scene_path": "res://scenes/levels/factory.tscn"
 	},
+	"filmstore": {
+		"scene_path": "res://scenes/levels/filmstore.tscn"
+	}
 }
 
 var unlocked_locations: Dictionary = {}

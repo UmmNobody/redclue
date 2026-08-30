@@ -38,37 +38,15 @@ theme_override_font_sizes/font_size = 8
 text = "QuestTitle"
 vertical_alignment = 1
 
-[node name="QuestDescription" type="Label" parent="QuestPage" unique_id=230797620]
-custom_maximum_size = Vector2(115, -1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -48.0
-offset_top = -5.0
-offset_right = 67.0
-offset_bottom = 28.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 4
-text = "QuestDescription"
-autowrap_mode = 2
-
-[node name="ObjectiveList" type="VBoxContainer" parent="QuestPage" unique_id=659146985]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = 23.0
-offset_right = 66.0
-offset_bottom = 74.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="QuestDescription" type="RichTextLabel" parent="QuestPage" unique_id=1285480170]
+custom_maximum_size = Vector2(100, 90)
+layout_mode = 0
+offset_left = 115.0
+offset_top = 85.0
+offset_right = 215.0
+offset_bottom = 175.0
+theme_override_font_sizes/normal_font_size = 6
+scroll_active = false
 
 [node name="EvidencePage" type="Control" parent="." unique_id=2043309386]
 visible = false

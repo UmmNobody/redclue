@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bjsrc3rwkrk4e"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_7xlr8"]
+[ext_resource type="Texture2D" uid="uid://dk2hl8jsdapnw" path="res://assets/interactable_png/factory_interact_png/garret.png" id="2_ldnqd"]
+[ext_resource type="Script" uid="uid://cnnsxmfrb4cws" path="res://scripts/npc/garret.gd" id="2_yuece"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w55pc"]
+
+[node name="garret" unique_id=1816552023 instance=ExtResource("1_7xlr8")]
+script = ExtResource("2_yuece")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_w55pc")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_ldnqd")

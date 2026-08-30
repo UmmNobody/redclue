@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://eofohd3noako"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_ngwyb"]
+[ext_resource type="Script" uid="uid://con6gqpjqir8m" path="res://scripts/interaction/motorcycle.gd" id="2_0pr36"]
+[ext_resource type="Texture2D" uid="uid://bxmjlxjrxotnx" path="res://assets/interactable_png/factory_interact_png/motorcycle.png" id="2_8o7jl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwrw0"]
+
+[node name="motorcycle" unique_id=1816552023 instance=ExtResource("1_ngwyb")]
+script = ExtResource("2_0pr36")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_wwrw0")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_8o7jl")

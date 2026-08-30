@@ -38,6 +38,7 @@ overrides = {
 "box_animation_new_text": "1",
 "box_margin_bottom": "5.0",
 "box_size": "Vector2(200, 50)",
+"name_label_box_offset": "Vector2(0, 5)",
 "name_label_custom_font_size": "4.0",
 "next_indicator_position_offset": "Vector2(-5, -5)",
 "next_indicator_size": "Vector2(5, 5)",

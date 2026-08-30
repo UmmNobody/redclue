@@ -7,8 +7,7 @@ extends Control
 @onready var evidence_tab: Button = $EvidenceTab
 
 @onready var quest_title: Label = $QuestPage/QuestTitle
-@onready var quest_description: Label = $QuestPage/QuestDescription
-@onready var objective_list: VBoxContainer = $QuestPage/ObjectiveList
+@onready var quest_description: RichTextLabel = $QuestPage/QuestDescription
 
 @onready var evidence_grid: GridContainer = $EvidencePage/EvidenceGrid
 @onready var previous_button: Button = $EvidencePage/PreviousButton
@@ -55,8 +54,6 @@ func close_notebook() -> void:
 	player.set_movement_enabled(true)
 
 func refresh() -> void:
-	clear_objectives()
-
 	var quest: Quest = QuestManager.current_quest
 
 	if quest == null:
@@ -65,38 +62,32 @@ func refresh() -> void:
 		return
 
 	quest_title.text = quest.quest_name
-	quest_description.text = quest.description
 
-	for objective in quest.objectives:
-		create_objective(quest, objective)
+	var description_text: String = quest.description
 
+	if not quest.objectives.is_empty():
+		description_text += "\n\n"
 
-func clear_objectives() -> void:
-	for child in objective_list.get_children():
-		child.queue_free()
+		for objective in quest.objectives:
+			description_text += create_objective(quest, objective)
+			description_text += "\n"
+
+	quest_description.text = description_text
 
 
 func create_objective(
 	quest: Quest,
 	objective: QuestObjective
-) -> void:
-	var label := RichTextLabel.new()
-
-	label.bbcode_enabled = true
-	label.fit_content = true
-	label.add_theme_font_size_override("normal_font_size", 4)
-
+) -> String:
 	var completed := QuestManager.is_objective_completed(
 		quest.quest_id,
 		objective.objective_id
 	)
 
 	if completed:
-		label.text = "[s]" + objective.description + "[/s]"
-	else:
-		label.text = objective.description
-
-	objective_list.add_child(label)
+		return "[s]" + objective.description + "[/s]"
+	
+	return objective.description
 
 func _on_close_button_pressed() -> void:
 	close_notebook()

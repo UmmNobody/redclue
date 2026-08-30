@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dyplc285r2ova"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_b6nd5"]
+[ext_resource type="Script" uid="uid://dssdhtoc6pube" path="res://scripts/interaction/door_move.gd" id="2_413ru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_413ru"]
+
+[node name="door_move" unique_id=1816552023 instance=ExtResource("1_b6nd5")]
+script = ExtResource("2_413ru")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_413ru")
+
+[node name="TeleportMarker" type="Marker2D" parent="." index="2" unique_id=242310348]

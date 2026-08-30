@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://1lb76iuog3g6"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_f7hac"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_aoti1"]
+
+[sub_resource type="Resource" id="Resource_f7hac"]
+script = ExtResource("1_f7hac")
+objective_id = "explore_room1_1"
+description = "ได้รับเบาะแสเพิ่มเติมชิ้นที่ 1"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[sub_resource type="Resource" id="Resource_aoti1"]
+script = ExtResource("1_f7hac")
+objective_id = "explore_room1_2"
+description = "ได้รับเบาะแสเพิ่มเติมชิ้นที่ 2"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_aoti1")
+quest_id = "explore_room1"
+quest_name = "สำรวจห้องควบคุม"
+description = "สำรวจรอบๆ ห้องควบคุมเผื่อจะได้หลักฐานเพิ่มเติม"
+objectives = Array[ExtResource("1_f7hac")]([SubResource("Resource_f7hac"), SubResource("Resource_aoti1")])
+quest_order = 3
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

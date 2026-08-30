@@ -1,0 +1,29 @@
+holm: "สถานการณ์เป็นยังไงบ้าง Devid"
+david: "เท่าที่ผมรู้ตอนนี้นะ ผู้เสียชีวิตคือ Victor Müller อดีตบัญชีของบริษัทนี้โดนเลิกจ้างปี 1987 ยังไม่รู้สาเหตุว่าทำไมเขาถึงกลับมาคืนนี้"
+label show_evidence
+david: "ช่วยดูหลักฐานนี้หน่อยสิ"
+- เอาภาพถ่ายเศษกระดาษให้ Holm ดู | [if {ask_holm_c1} == false] [else="hide"]
+	join c1 center [animation="Fade In Up"]
+	david: "มีรหัสอะไรซักอย่างอยู่บนเศษกระดาษที่เขากำไว้ก่อนตาย"
+	holm: "KONS 7-B งั้นหลอ"
+	holm: "อาจจะเป็นรหัสที่หมายถึงบางสิ่งบางอย่างในบริษัทหรือเปล่า?"
+	david: "ก็ฟังดูเป็นไปได้"
+	leave c1 [animation="Fade Out Down"]
+	set {ask_holm_c1} = true
+- เอาภาพถ่ายกาน้ำที่มีตะกอนให้ Holm ดู | [if {ask_holm_c3} == false] [else="hide"]
+	join c3 center [animation="Fade In Up"]
+	david: "กาน้ำที่ผมเจอในห้องควบคุมมีตะกอนผิดปกติอยู่"
+	holm: "เราน่าจะลองเอาไปวิเคราะห์ดู"
+	david: "ผมเห็นด้วย"
+	leave c3 [animation="Fade Out Down"]
+	set {ask_holm_c3} = true
+if {ask_holm_c1} == false:
+	jump show_evidence
+if {ask_holm_c3} == false:
+	jump show_evidence
+holm: "แล้วคิดว่าเขาตายยังไง"
+david: "ริมฝีปากคล้ำ ไม่มีรอยต่อสู้ แต่งตัวดี และขึ้นมาชั้นสองในโรงงานร้างตอนกลางคืน"
+david: "ผมไม่เเน่ใจเหมือนกัน แต่ว่าไม่ใช่การฆ่าตัวตายแน่นอน"
+holm: "โอเคงั้นส่งหลักฐานในกาน้ำนั้นฝาก Edmund เอาไปส่งให้หมอ Harder วิเคราะห์อีกที ถ้ารู้ผลแล้วผมจะแจ้งอีกที"
+set {ask_holm_c1} = false
+set {ask_holm_c3} = false

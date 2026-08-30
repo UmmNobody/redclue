@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c3sutqa3n182k"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_4l5h2"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_esy3l"]
+
+[sub_resource type="Resource" id="Resource_4l5h2"]
+script = ExtResource("1_4l5h2")
+objective_id = "meet_evelyn1"
+description = "ไปหา Evelyn ที่ร้าน Bell's Film & Photo"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_esy3l")
+quest_id = "meet_evelyn"
+quest_name = "ไปหา Evelyn ที่ร้านฟิล์ม"
+description = "ไปที่ร้าน Bell's Film & Photo ของ Evelyn เพื่อล้างรูปเบาะแสที่เก็บได้"
+objectives = Array[ExtResource("1_4l5h2")]([SubResource("Resource_4l5h2")])
+quest_order = 6
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

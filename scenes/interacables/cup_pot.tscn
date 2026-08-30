@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b8fsvby1643ll"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_6kdje"]
+[ext_resource type="Texture2D" uid="uid://dsu4nxglee0k0" path="res://assets/interactable_png/factory_interact_png/cup_pot.png" id="2_lrx4i"]
+[ext_resource type="Script" uid="uid://bnhmsnpkuvf3v" path="res://scripts/interaction/cup_pot.gd" id="2_m4il0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0abr"]
+
+[node name="cup_pot" unique_id=1816552023 instance=ExtResource("1_6kdje")]
+script = ExtResource("2_m4il0")
+required_quest_id = "explore_room1"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_w0abr")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_lrx4i")

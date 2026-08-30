@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://0fhul507ensg"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_omxm7"]
+[ext_resource type="Script" uid="uid://c4iskdvjoru7t" path="res://scripts/interaction/file.gd" id="2_ffb2c"]
+[ext_resource type="Texture2D" uid="uid://bc2v86c6pumyn" path="res://assets/interactable_png/factory_interact_png/file.png" id="2_sjje3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1l7r"]
+
+[node name="file" unique_id=1816552023 instance=ExtResource("1_omxm7")]
+script = ExtResource("2_ffb2c")
+required_quest_id = "exp"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_f1l7r")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_sjje3")

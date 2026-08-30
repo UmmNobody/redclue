@@ -22,6 +22,7 @@ position = Vector2(356, -105)
 
 [node name="office_door" parent="Interactables" unique_id=1876554291 instance=ExtResource("4_4m8q4")]
 position = Vector2(511, -99)
+short_message = "เสียงโทรศัพท์ยังดังไม่หยุด ... ไปรับโทรศัพท์ก่อนดีกว่า"
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("5_tuhfx")]
 position = Vector2(0, -180)

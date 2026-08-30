@@ -5,3 +5,4 @@ extends Resource
 @export var quest_name: String
 @export_multiline var description: String
 @export var objectives: Array[QuestObjective]
+@export var quest_order: int = 0

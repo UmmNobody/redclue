@@ -28,11 +28,28 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
+"c1": "res://character/c1.dch",
+"c2": "res://character/c2.dch",
+"c3": "res://character/c3.dch",
+"c4": "res://character/c4.dch",
+"c6": "res://character/c6.dch",
+"c64": "res://character/c64.dch",
 "david": "res://character/david.dch",
+"enmund": "res://character/enmund.dch",
+"garret": "res://character/garret.dch",
 "holm": "res://character/holm.dch"
 }
 directories/dtl_directory={
+"after_c6": "res://timeline/after_c6.dtl",
+"check_body": "res://timeline/check_body.dtl",
+"cigarette_stub": "res://timeline/cigarette_stub.dtl",
+"cup_pot": "res://timeline/cup_pot.dtl",
+"enmund2": "res://timeline/enmund2.dtl",
+"file": "res://timeline/file.dtl",
 "first_phone": "res://timeline/first_phone.dtl",
+"garret": "res://timeline/garret.dtl",
+"holm1": "res://timeline/holm1.dtl",
+"meet_enmund": "res://timeline/meet_enmund.dtl",
 "short_message": "res://timeline/short_message.dtl"
 }
 layout/style_directory={
@@ -42,7 +59,41 @@ layout/style_directory={
 layout/style_list=["res://scenes/ui/dialogic_style.tres"]
 layout/default_style="res://scenes/ui/dialogic_style.tres"
 variables={
+"ask_holm_c1": false,
+"ask_holm_c3": false,
 "short_message": ""
+}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
 }
 
 [display]

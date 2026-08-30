@@ -15,4 +15,5 @@ quest_id = "meet_enmund"
 quest_name = "ไปหา Enmund"
 description = "เดินทางไปยังโรงงานเก่าของ Weiss Industrial. Holm บอกว่า Enmund รออยู่ที่นั้นแล้ว"
 objectives = Array[ExtResource("1_5ntf5")]([SubResource("Resource_bvgcm")])
+quest_order = 1
 metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

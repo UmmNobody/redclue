@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bwn2ibkow34ic"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_3laan"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_acmks"]
+
+[sub_resource type="Resource" id="Resource_xxykh"]
+script = ExtResource("1_3laan")
+objective_id = "check_side_factory"
+description = "ได้รับเบาะแสของกลิ่นปริศนา"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_acmks")
+quest_id = "check_side_factory"
+quest_name = "ไปสำรวจด้านข้างโรงงาน"
+description = "ไปสำรวจด่านข้างโรงงานเผื่อจะเจอหลักฐานเกี่ยวกับกลิ่นปริศนาที่ Garret พูดถึง"
+objectives = Array[ExtResource("1_3laan")]([SubResource("Resource_xxykh")])
+quest_order = 5
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

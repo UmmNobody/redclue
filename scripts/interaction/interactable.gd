@@ -6,6 +6,7 @@ extends Area2D
 
 @export_category("Quest Requirement")
 @export var required_quest_id: String = ""
+@export var short_message: String = ""
 
 var is_highlighted: bool = false
 
@@ -53,12 +54,18 @@ func start_completed_interaction() -> void:
 
 func ended() -> void:
 	Dialogic.timeline_ended.disconnect(ended)
+	Dialogic.signal_event.disconnect(dialogic_signal)
 	player.set_movement_enabled(true)
+	# Override me
+
+func dialogic_signal(argument: String) :
+	pass
 	# Override me
 
 func set_start_dialogue() -> void:
 	player.set_movement_enabled(false)
 	Dialogic.timeline_ended.connect(ended)
+	Dialogic.signal_event.connect(dialogic_signal)
 
 # =========================================================
 # Highlight
