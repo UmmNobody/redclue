@@ -4,6 +4,7 @@ signal evidence_unlocked(evidence: Evidence)
 
 var unlocked_evidences: Dictionary = {}
 var all_evidences: Dictionary = {}
+var placed_positions: Dictionary = {}
 
 func _ready() -> void:
 	load_evidences()
@@ -52,3 +53,6 @@ func get_unlocked_evidences() -> Array[Evidence]:
 			all_evidences[id]
 		)
 	return result
+
+func save_card_position(evidence_id: String, card_position: Vector2) -> void:
+	placed_positions[evidence_id] = card_position

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cqwpvhukafo7p"]
+
+[ext_resource type="Script" uid="uid://cqyin73c1qc8w" path="res://scenes/levels/test_level.gd" id="1_yautc"]
+[ext_resource type="PackedScene" uid="uid://niql73s8sgai" path="res://scenes/ui/EvidenceBoard.tscn" id="2_yautc"]
+
+[node name="TestLevel" type="Node2D" unique_id=1690355029]
+script = ExtResource("1_yautc")
+
+[node name="EvidenceBoard" parent="." unique_id=1314747732 instance=ExtResource("2_yautc")]
