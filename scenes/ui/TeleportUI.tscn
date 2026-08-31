@@ -33,9 +33,9 @@ vertical_alignment = 1
 
 [node name="OfficeButton" type="Button" parent="Map" unique_id=1053975755]
 layout_mode = 0
-offset_left = 55.0
+offset_left = 82.0
 offset_top = 39.0
-offset_right = 86.0
+offset_right = 113.0
 offset_bottom = 59.0
 theme_override_font_sizes/font_size = 8
 text = "Office"
@@ -44,10 +44,10 @@ location_id = "office"
 
 [node name="FactoryButton" type="Button" parent="Map" unique_id=380369724]
 layout_mode = 0
-offset_left = 186.0
-offset_top = 48.0
-offset_right = 223.0
-offset_bottom = 68.0
+offset_left = 197.0
+offset_top = 32.0
+offset_right = 234.0
+offset_bottom = 52.0
 theme_override_font_sizes/font_size = 8
 text = "Factory"
 script = ExtResource("1_cegrh")
@@ -55,14 +55,47 @@ location_id = "factory"
 
 [node name="FilmStoreButton" type="Button" parent="Map" unique_id=259336691]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 89.0
-offset_right = 140.0
-offset_bottom = 109.0
+offset_left = 127.0
+offset_top = 67.0
+offset_right = 172.0
+offset_bottom = 87.0
 theme_override_font_sizes/font_size = 8
 text = "FilmStore"
 script = ExtResource("1_cegrh")
 location_id = "filmstore"
+
+[node name="BarButton" type="Button" parent="Map" unique_id=1735831783]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 74.0
+offset_right = 259.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 8
+text = "bar"
+script = ExtResource("1_cegrh")
+location_id = "bar"
+
+[node name="IngridButton" type="Button" parent="Map" unique_id=1788636563]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 77.0
+offset_right = 77.0
+offset_bottom = 97.0
+theme_override_font_sizes/font_size = 8
+text = "IngridHouse"
+script = ExtResource("1_cegrh")
+location_id = "ingridhouse"
+
+[node name="WeissButton" type="Button" parent="Map" unique_id=1365337881]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 115.0
+offset_right = 177.0
+offset_bottom = 135.0
+theme_override_font_sizes/font_size = 8
+text = "WeissIndustrial"
+script = ExtResource("1_cegrh")
+location_id = "weissindustrial"
 
 [node name="CloseButton" type="Button" parent="." unique_id=1559802365]
 layout_mode = 1

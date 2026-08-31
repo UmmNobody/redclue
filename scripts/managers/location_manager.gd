@@ -11,6 +11,15 @@ var locations: Dictionary = {
 	},
 	"filmstore": {
 		"scene_path": "res://scenes/levels/filmstore.tscn"
+	},
+	"bar": {
+		"scene_path": "res://scenes/levels/bar.tscn"
+	},
+	"ingridhouse": {
+		"scene_path": "res://scenes/levels/ingridhouse.tscn"
+	},
+	"weissindustrial": {
+		"scene_path": "res://scenes/levels/weissindustrial.tscn"
 	}
 }
 

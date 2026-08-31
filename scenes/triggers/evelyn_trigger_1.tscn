@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dapra0q72mylw"]
+
+[ext_resource type="PackedScene" uid="uid://d1tqf738dvn76" path="res://scenes/triggers/event_trigger.tscn" id="1_7wvdx"]
+[ext_resource type="Script" uid="uid://c6dxa3fssb4dj" path="res://scripts/triggers/evelyn_trigger_1.gd" id="2_vbqm2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgjax"]
+size = Vector2(39, 52)
+
+[node name="evelyn_trigger1" unique_id=160060719 instance=ExtResource("1_7wvdx")]
+script = ExtResource("2_vbqm2")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=21895147]
+shape = SubResource("RectangleShape2D_fgjax")

@@ -2,7 +2,7 @@ class_name KeyboardMinigame
 extends Control
 
 
-signal minigame_finished(result: String)
+signal minigame_finished(result: bool)
 
 
 @export_category("Progress")
@@ -37,6 +37,7 @@ func _ready() -> void:
 
 func start_minigame() -> void:
 	is_playing = true
+	show()
 
 	progress_bar.value = start_progress
 
@@ -98,7 +99,7 @@ func _correct_input() -> void:
 	progress_bar.value += correct_amount
 
 	if progress_bar.value >= 100.0:
-		_finish("success")
+		_finish(true)
 		return
 
 	_generate_new_key()
@@ -108,7 +109,7 @@ func _wrong_input() -> void:
 	progress_bar.value -= wrong_amount
 
 	if progress_bar.value <= 0.0:
-		_finish("fail")
+		_finish(false)
 		return
 
 	_generate_new_key()
@@ -118,7 +119,7 @@ func _time_out() -> void:
 	progress_bar.value -= wrong_amount
 
 	if progress_bar.value <= 0.0:
-		_finish("fail")
+		_finish(false)
 		return
 
 	_generate_new_key()
@@ -131,10 +132,10 @@ func _on_decay_timer_timeout() -> void:
 	progress_bar.value -= decay_amount
 
 	if progress_bar.value <= 0.0:
-		_finish("fail")
+		_finish(false)
 
 
-func _finish(result: String) -> void:
+func _finish(result: bool) -> void:
 	if not is_playing:
 		return
 
@@ -142,6 +143,7 @@ func _finish(result: String) -> void:
 
 	decay_timer.stop()
 
+	print("next emit finish")
 	minigame_finished.emit(result)
 
 	hide()

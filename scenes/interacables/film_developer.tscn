@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cuyws7nowmvb8"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_v8cb8"]
+[ext_resource type="Script" uid="uid://dq8gvatlhd3qr" path="res://scripts/interaction/film_developer.gd" id="2_7a5pw"]
+[ext_resource type="Texture2D" uid="uid://cebhbgjjmaecm" path="res://assets/interactable_png/flim_interact_png/flim_table.png" id="2_wx3fr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7m8a1"]
+
+[node name="film_developer" unique_id=1816552023 instance=ExtResource("1_v8cb8")]
+script = ExtResource("2_7a5pw")
+required_quest_id = "develop_film"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_7m8a1")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_wx3fr")

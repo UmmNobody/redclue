@@ -24,4 +24,4 @@ shape = SubResource("CapsuleShape2D_gx1jg")
 
 [node name="InteractionDetector" type="Node2D" parent="." unique_id=1163047318]
 script = ExtResource("3_gmlin")
-interaction_range = 30.0
+interaction_range = 40.0

@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dlotpcqxn2i1q"]
+
+[ext_resource type="Texture2D" uid="uid://cxpfqayey0khl" path="res://assets/maps/ingrid_house_out.png" id="1_kae0g"]
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_qbwsh"]
+[ext_resource type="Texture2D" uid="uid://cf6ykmt835wat" path="res://assets/maps/ingrid_house_in.png" id="2_tu04u"]
+[ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="3_iuhhv"]
+[ext_resource type="PackedScene" uid="uid://eofohd3noako" path="res://scenes/interacables/motorcycle.tscn" id="3_lk2kv"]
+[ext_resource type="Script" uid="uid://47gtxh40rdri" path="res://scripts/interaction/ingrid_door.gd" id="4_2dj6i"]
+[ext_resource type="Texture2D" uid="uid://dhtjg0pn48puq" path="res://assets/interactable_png/flim_interact_png/flim_door.png" id="4_5132f"]
+[ext_resource type="Texture2D" uid="uid://dopxqhpc3nita" path="res://assets/interactable_png/factory_interact_png/door_f22_to_f21.png" id="5_5132f"]
+[ext_resource type="PackedScene" uid="uid://ct00js10suatb" path="res://scenes/npc/ingrid.tscn" id="8_dlpyn"]
+[ext_resource type="PackedScene" uid="uid://ctb41nol6ovwj" path="res://scenes/triggers/ingrid_trigger_1.tscn" id="9_j0qma"]
+[ext_resource type="PackedScene" uid="uid://durj3ps4fy17w" path="res://scenes/triggers/ingrid_trigger_2.tscn" id="10_hs30n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dj6i"]
+size = Vector2(3.4951706, 8.873875)
+
+[node name="Ingridhouse" type="Node2D" unique_id=1461472051]
+
+[node name="ingridhouse_out" type="Sprite2D" parent="." unique_id=207032556]
+position = Vector2(315, -211)
+texture = ExtResource("1_kae0g")
+
+[node name="ingridhouse_in" type="Sprite2D" parent="." unique_id=687440572]
+position = Vector2(1146, -211)
+texture = ExtResource("2_tu04u")
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=655613715]
+position = Vector2(117, -186)
+
+[node name="Doors" type="Node2D" parent="." unique_id=276150173]
+
+[node name="door_move" parent="Doors" unique_id=1816552023 instance=ExtResource("3_iuhhv")]
+position = Vector2(385, -207)
+script = ExtResource("4_2dj6i")
+short_message = "ไปหา Enmund ก่อนดีกว่า ...ๆ"
+
+[node name="CollisionShape2D" parent="Doors/door_move" index="0" unique_id=783111100]
+scale = Vector2(3.968714, 4.584511)
+shape = SubResource("RectangleShape2D_2dj6i")
+
+[node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
+texture = ExtResource("4_5132f")
+
+[node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
+position = Vector2(627, 21)
+
+[node name="door_move2" parent="Doors" unique_id=116185118 instance=ExtResource("3_iuhhv")]
+position = Vector2(997, -193)
+short_message = "ไปหา Enmund ก่อนดีกว่า ...ๆ"
+
+[node name="CollisionShape2D" parent="Doors/door_move2" index="0" unique_id=783111100]
+scale = Vector2(3.9871552, 4.4399934)
+shape = SubResource("RectangleShape2D_2dj6i")
+
+[node name="Sprite2D" parent="Doors/door_move2" index="1" unique_id=523219159]
+texture = ExtResource("5_5132f")
+
+[node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
+position = Vector2(-612, 7)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=390847447]
+
+[node name="motorcycle" parent="Interactables" unique_id=1385761917 instance=ExtResource("3_lk2kv")]
+position = Vector2(93, -186)
+
+[node name="ingrid" parent="Interactables" unique_id=844519914 instance=ExtResource("8_dlpyn")]
+position = Vector2(1132, -193)
+required_quest_id = "meet_ingrid"
+
+[node name="Eventtriggers" type="Node2D" parent="." unique_id=2047997727]
+
+[node name="ingrid_trigger_1" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("9_j0qma")]
+position = Vector2(1111, -193)
+required_quest_id = "meet_ingrid"
+
+[node name="ingrid_trigger_2" parent="Eventtriggers" unique_id=914807013 instance=ExtResource("10_hs30n")]
+position = Vector2(278, -202)
+required_completed_quest_id = "meet_ingrid"
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_qbwsh")]
+position = Vector2(-26, -276)
+
+[editable path="Doors/door_move"]
+[editable path="Doors/door_move2"]

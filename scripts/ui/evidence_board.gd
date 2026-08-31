@@ -8,6 +8,7 @@ const EVIDENCE_CARD = preload("res://scenes/ui/evidence_card.tscn")
 @onready var placed_cards: Control = $Board/PlacedCards
 @onready var board: Control = $Board
 @onready var culprit_sprite: Sprite2D = $Board/CulpritSprite
+@onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
 
 # รายชื่อคู่หลักฐานที่ถูกต้อง (จับคู่สลับสลับซ้าย-ขวาได้)
 var valid_pairs: Array = [
@@ -27,11 +28,11 @@ var pan_offset: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
-	EvidenceManager.unlock_evidence("C1")
-	EvidenceManager.unlock_evidence("C2")
-	EvidenceManager.unlock_evidence("C3")
-	EvidenceManager.unlock_evidence("C4")
-	EvidenceManager.unlock_evidence("C5")
+	#EvidenceManager.unlock_evidence("C1")
+	#EvidenceManager.unlock_evidence("C2")
+	#EvidenceManager.unlock_evidence("C3")
+	#EvidenceManager.unlock_evidence("C4")
+	#EvidenceManager.unlock_evidence("C5")
 	_load_evidence_cards()
 	update_culprit_reveal()
 
@@ -49,6 +50,13 @@ func _process(_delta: float) -> void:
 		line.set_point_position(0, _get_card_center(conn["card_a"]))
 		line.set_point_position(1, _get_card_center(conn["card_b"]))
 
+func open() -> void:
+	player.set_movement_enabled(false)
+	show()
+	
+func close() -> void:
+	player.set_movement_enabled(true)
+	hide()
 
 # --- ระบบเริ่ม/จบ การลากเส้นเชื่อม ---
 
@@ -207,3 +215,7 @@ func update_culprit_reveal() -> void:
 	print(target_alpha)
 	tween.tween_property(culprit_sprite, "modulate:a", target_alpha, 0.5)\
 		.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+
+
+func _on_close_button_pressed() -> void:
+	close()

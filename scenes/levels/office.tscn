@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://1s54wau3vd4k" path="res://scenes/interacables/sofa.tscn" id="2_ey3sf"]
 [ext_resource type="PackedScene" uid="uid://bqey8mvoprmqf" path="res://scenes/interacables/telephone.tscn" id="3_1gkrr"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_4m8q4"]
+[ext_resource type="PackedScene" uid="uid://bsa48kxbnmgyn" path="res://scenes/interacables/evidence_board.tscn" id="5_ey3sf"]
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="5_tuhfx"]
+[ext_resource type="PackedScene" uid="uid://dspvadm6mtcl6" path="res://scenes/triggers/afterboard_trigger.tscn" id="6_1gkrr"]
 
 [node name="Office" type="Node2D" unique_id=1580521500]
 
@@ -23,6 +25,16 @@ position = Vector2(356, -105)
 [node name="office_door" parent="Interactables" unique_id=1876554291 instance=ExtResource("4_4m8q4")]
 position = Vector2(511, -99)
 short_message = "เสียงโทรศัพท์ยังดังไม่หยุด ... ไปรับโทรศัพท์ก่อนดีกว่า"
+
+[node name="evidence_board" parent="Interactables" unique_id=1190979840 instance=ExtResource("5_ey3sf")]
+position = Vector2(129, -110)
+required_quest_id = "back_to_office"
+
+[node name="Eventtriggers" type="Node2D" parent="." unique_id=1818877462]
+
+[node name="afterboard_trigger" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("6_1gkrr")]
+position = Vector2(216, -102)
+required_completed_quest_id = "back_to_office"
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("5_tuhfx")]
 position = Vector2(0, -180)

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://bm8ivejsymoxn"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_qlkt4"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_rfciv"]
+
+[sub_resource type="Resource" id="Resource_qlkt4"]
+script = ExtResource("1_qlkt4")
+objective_id = "back_to_office1"
+description = "ใช้งานกระดานหลักฐาน"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_rfciv")
+quest_id = "back_to_office"
+quest_name = "กลับไปออฟฟิสเพื่อวิเคราะห์หลักฐาน"
+description = "กลับไปที่ออฟฟิสและทำการวิเคราะห์หลักฐานที่กระดานหลักฐาน"
+objectives = Array[ExtResource("1_qlkt4")]([SubResource("Resource_qlkt4")])
+quest_order = 8
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

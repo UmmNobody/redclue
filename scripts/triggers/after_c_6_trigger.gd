@@ -6,9 +6,8 @@ func trigger_event() -> void:
 
 
 func ended() -> void:
-	if Dialogic.timeline_ended.is_connected(ended):
-		Dialogic.timeline_ended.disconnect(ended)
-
+	Dialogic.timeline_ended.disconnect(ended)
+	Dialogic.signal_event.disconnect(dialogic_signal)
 	player.set_movement_enabled(true)
 	QuestManager.start_quest("meet_evelyn")
 	LocationManager.unlock_location("filmstore")

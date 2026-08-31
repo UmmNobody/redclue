@@ -63,3 +63,18 @@ layout_mode = 0
 offset_right = 320.0
 offset_bottom = 40.0
 alignment = 1
+
+[node name="CloseButton" type="Button" parent="." unique_id=834728331]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -34.0
+offset_top = 10.0
+offset_right = -8.0
+offset_bottom = 25.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 6
+text = "Close"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://d05du1dwchgix"]
+
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_sxifc"]
+[ext_resource type="Texture2D" uid="uid://net2wlhid2u4" path="res://assets/maps/weiss_f1.png" id="1_xbouy"]
+[ext_resource type="Texture2D" uid="uid://da07g1nj71a27" path="res://assets/maps/weiss_f2-1.png" id="2_52cvg"]
+[ext_resource type="Texture2D" uid="uid://dam30ldp3b830" path="res://assets/maps/weiss_f2-2.png" id="3_52cvg"]
+[ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_vvrmm"]
+[ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="5_k5o8j"]
+[ext_resource type="Texture2D" uid="uid://dxgdavp2tdxvv" path="res://assets/interactable_png/weiss_interact_png/lift.png" id="6_2w8tn"]
+[ext_resource type="Texture2D" uid="uid://cee3d26wy25pv" path="res://assets/interactable_png/factory_interact_png/door_f21_to_f22.png" id="7_2w8tn"]
+
+[node name="Weissindustrial" type="Node2D" unique_id=919028447]
+
+[node name="f1" type="Sprite2D" parent="." unique_id=786555312]
+position = Vector2(495, -261)
+texture = ExtResource("1_xbouy")
+
+[node name="f21" type="Sprite2D" parent="." unique_id=2007981389]
+position = Vector2(1491, -259)
+texture = ExtResource("2_52cvg")
+
+[node name="f22" type="Sprite2D" parent="." unique_id=941937702]
+position = Vector2(2365, -259)
+texture = ExtResource("3_52cvg")
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=724618447]
+position = Vector2(278, -240)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=205925919]
+
+[node name="office_door" parent="Interactables" unique_id=1816552023 instance=ExtResource("4_vvrmm")]
+position = Vector2(259, -244)
+required_quest_id = ""
+short_message = "เสียงโทรศัพท์ยังดังไม่หยุด ... ไปรับโทรศัพท์ก่อนดีกว่า"
+
+[node name="Sprite2D" parent="Interactables/office_door" index="1" unique_id=523219159]
+flip_h = true
+
+[node name="Doors" type="Node2D" parent="." unique_id=1921127279]
+
+[node name="door_move" parent="Doors" unique_id=1735786032 instance=ExtResource("5_k5o8j")]
+position = Vector2(690, -248)
+
+[node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
+texture = ExtResource("6_2w8tn")
+
+[node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
+position = Vector2(643, 8)
+
+[node name="door_move2" parent="Doors" unique_id=1368124781 instance=ExtResource("5_k5o8j")]
+position = Vector2(1333, -246)
+
+[node name="Sprite2D" parent="Doors/door_move2" index="1" unique_id=523219159]
+texture = ExtResource("6_2w8tn")
+
+[node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
+position = Vector2(-643, 6)
+
+[node name="door_move3" parent="Doors" unique_id=1968329298 instance=ExtResource("5_k5o8j")]
+position = Vector2(1710, -243)
+
+[node name="Sprite2D" parent="Doors/door_move3" index="1" unique_id=523219159]
+texture = ExtResource("7_2w8tn")
+
+[node name="TeleportMarker" parent="Doors/door_move3" index="2" unique_id=242310348]
+position = Vector2(564, 7)
+
+[node name="door_move4" parent="Doors" unique_id=1873298451 instance=ExtResource("5_k5o8j")]
+position = Vector2(2258, -243)
+
+[node name="Sprite2D" parent="Doors/door_move4" index="1" unique_id=523219159]
+texture = ExtResource("7_2w8tn")
+flip_h = true
+
+[node name="TeleportMarker" parent="Doors/door_move4" index="2" unique_id=242310348]
+position = Vector2(-564, 7)
+
+[node name="Eventtriggers" type="Node2D" parent="." unique_id=416070284]
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_sxifc")]
+
+[editable path="Interactables/office_door"]
+[editable path="Doors/door_move"]
+[editable path="Doors/door_move2"]
+[editable path="Doors/door_move3"]
+[editable path="Doors/door_move4"]

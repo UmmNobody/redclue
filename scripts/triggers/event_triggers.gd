@@ -49,13 +49,16 @@ func trigger_event() -> void:
 
 
 func ended() -> void:
-	if Dialogic.timeline_ended.is_connected(ended):
-		Dialogic.timeline_ended.disconnect(ended)
-
+	Dialogic.timeline_ended.disconnect(ended)
+	Dialogic.signal_event.disconnect(dialogic_signal)
 	player.set_movement_enabled(true)
 	# Override me
 
+func dialogic_signal(argument: String) :
+	pass
+	# Override me
 
 func set_start_dialogue() -> void:
 	player.set_movement_enabled(false)
 	Dialogic.timeline_ended.connect(ended)
+	Dialogic.signal_event.connect(dialogic_signal)

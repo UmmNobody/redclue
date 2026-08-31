@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ctb41nol6ovwj"]
+
+[ext_resource type="PackedScene" uid="uid://d1tqf738dvn76" path="res://scenes/triggers/event_trigger.tscn" id="1_3eonj"]
+[ext_resource type="Script" uid="uid://cuvskadh7oi5p" path="res://scripts/triggers/ingrid_trigger_1.gd" id="2_li8rg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j0qma"]
+size = Vector2(35, 75)
+
+[node name="ingrid_trigger_1" unique_id=160060719 instance=ExtResource("1_3eonj")]
+script = ExtResource("2_li8rg")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=21895147]
+shape = SubResource("RectangleShape2D_j0qma")

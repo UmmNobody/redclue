@@ -1,5 +1,6 @@
 extends Interactable
 
+
 func start_not_started_interaction() -> void:
 	DialogueManager.show_short_message("จัดการธุระที่นี้ให้เสร็จก่อนดีกว่าค่อยไป ...")
 

@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://3517b0d56glk" path="res://scenes/levels/base_level.gd" id="1_wwrw0"]
 [ext_resource type="PackedScene" uid="uid://de52mv5g16w1x" path="res://scenes/ui/notebook.tscn" id="2_ukglk"]
 [ext_resource type="PackedScene" uid="uid://byjcewwe20r31" path="res://scenes/ui/TeleportUI.tscn" id="3_ukglk"]
+[ext_resource type="PackedScene" uid="uid://dj7q4g2umdltf" path="res://scenes/minigames/MinigameKeyboard.tscn" id="5_o1chu"]
+[ext_resource type="PackedScene" uid="uid://niql73s8sgai" path="res://scenes/ui/EvidenceBoard.tscn" id="6_3rriw"]
 
 [node name="BaseLevel" type="Node2D" unique_id=1392396242]
 script = ExtResource("1_wwrw0")
@@ -19,3 +21,9 @@ offset = Vector2(0, -20)
 [node name="Notebook" parent="CanvasLayer" unique_id=1031771591 instance=ExtResource("2_ukglk")]
 
 [node name="TeleportUi" parent="CanvasLayer" unique_id=671122715 instance=ExtResource("3_ukglk")]
+
+[node name="MinigameKeyboard" parent="CanvasLayer" unique_id=1214500244 groups=["MinigameKeyboard"] instance=ExtResource("5_o1chu")]
+visible = false
+
+[node name="EvidenceBoard" parent="CanvasLayer" unique_id=1314747732 groups=["EvidenceBoard"] instance=ExtResource("6_3rriw")]
+visible = false

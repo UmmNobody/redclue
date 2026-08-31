@@ -34,23 +34,37 @@ directories/dch_directory={
 "c4": "res://character/c4.dch",
 "c6": "res://character/c6.dch",
 "c64": "res://character/c64.dch",
+"c7": "res://character/c7.dch",
 "david": "res://character/david.dch",
+"elias": "res://character/elias.dch",
 "enmund": "res://character/enmund.dch",
+"evelyn": "res://character/evelyn.dch",
 "garret": "res://character/garret.dch",
-"holm": "res://character/holm.dch"
+"holm": "res://character/holm.dch",
+"ingrid": "res://character/ingrid.dch"
 }
 directories/dtl_directory={
 "after_c6": "res://timeline/after_c6.dtl",
 "check_body": "res://timeline/check_body.dtl",
 "cigarette_stub": "res://timeline/cigarette_stub.dtl",
 "cup_pot": "res://timeline/cup_pot.dtl",
+"elias1": "res://timeline/elias1.dtl",
 "enmund2": "res://timeline/enmund2.dtl",
+"evelyn1": "res://timeline/evelyn1.dtl",
+"evelyn2": "res://timeline/evelyn2.dtl",
+"fail_minigame": "res://timeline/fail_minigame.dtl",
 "file": "res://timeline/file.dtl",
 "first_phone": "res://timeline/first_phone.dtl",
 "garret": "res://timeline/garret.dtl",
 "holm1": "res://timeline/holm1.dtl",
+"holm2": "res://timeline/holm2.dtl",
+"holm3": "res://timeline/holm3.dtl",
+"ingrid1": "res://timeline/ingrid1.dtl",
+"knockdoor": "res://timeline/knockdoor.dtl",
 "meet_enmund": "res://timeline/meet_enmund.dtl",
-"short_message": "res://timeline/short_message.dtl"
+"short_message": "res://timeline/short_message.dtl",
+"start_minigame": "res://timeline/start_minigame.dtl",
+"sucess_minigame": "res://timeline/sucess_minigame.dtl"
 }
 layout/style_directory={
 "": "res://scenes/ui/dialogic_style.tres",
@@ -59,8 +73,11 @@ layout/style_directory={
 layout/style_list=["res://scenes/ui/dialogic_style.tres"]
 layout/default_style="res://scenes/ui/dialogic_style.tres"
 variables={
+"ask_elias1": false,
+"ask_elias2": false,
 "ask_holm_c1": false,
 "ask_holm_c3": false,
+"ask_ingrid1": false,
 "short_message": ""
 }
 text/letter_speed=0.01
@@ -114,6 +131,8 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 Interactable=""
 Player=""
 TeleportUI=""
+MinigameKeyboard=""
+EvidenceBoard=""
 
 [input]
 

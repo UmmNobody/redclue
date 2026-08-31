@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d4hksjjjju7mu"]
+
+[ext_resource type="Texture2D" uid="uid://b0rnh81x040o0" path="res://assets/maps/bar_in.png" id="1_hg5cc"]
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_hj8mm"]
+[ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="2_87w1v"]
+[ext_resource type="Texture2D" uid="uid://bylciemtyldnh" path="res://assets/interactable_png/bar_interact_png/bardoor.png" id="3_6c8e7"]
+[ext_resource type="PackedScene" uid="uid://cpguw5evh10br" path="res://scenes/interacables/elias.tscn" id="4_e6pxe"]
+
+[node name="Bar" type="Node2D" unique_id=125587422]
+
+[node name="barmap" type="Sprite2D" parent="." unique_id=63754853]
+position = Vector2(460, -211)
+texture = ExtResource("1_hg5cc")
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=1992550569]
+position = Vector2(648, -187)
+
+[node name="Doors" type="Node2D" parent="." unique_id=1178633323]
+
+[node name="Interactables" type="Node2D" parent="." unique_id=18909058]
+
+[node name="bar_door" parent="Interactables" unique_id=1816552023 instance=ExtResource("2_87w1v")]
+position = Vector2(667, -194)
+required_quest_id = ""
+
+[node name="CollisionShape2D" parent="Interactables/bar_door" index="0" unique_id=783111100]
+scale = Vector2(0.73866886, 0.6584532)
+
+[node name="Sprite2D" parent="Interactables/bar_door" index="1" unique_id=523219159]
+texture = ExtResource("3_6c8e7")
+
+[node name="elias" parent="Interactables" unique_id=1779072938 instance=ExtResource("4_e6pxe")]
+position = Vector2(337, -195)
+
+[node name="Eventtriggers" type="Node2D" parent="." unique_id=1227635179]
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_hj8mm")]
+position = Vector2(488, -277)
+
+[editable path="Interactables/bar_door"]
