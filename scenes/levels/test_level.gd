@@ -1,11 +1,12 @@
 extends Node2D
 
+@onready var minigame: Control = $MiniGameConrad
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#$MinigameKeyboard.minigame_finished.connect(_on_minigame_finished)
 	#$MinigameKeyboard.start_minigame()
-	pass
+	minigame.open_game()
 
 func _on_minigame_finished(result: String) -> void:
 	if result == "success":

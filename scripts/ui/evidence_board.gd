@@ -1,6 +1,8 @@
 class_name EvidenceBoard
 extends Control
 
+signal correct_pair_found(card_a: String, card_b: String)
+signal board_completed
 
 const EVIDENCE_CARD = preload("res://scenes/ui/evidence_card.tscn")
 
@@ -12,8 +14,13 @@ const EVIDENCE_CARD = preload("res://scenes/ui/evidence_card.tscn")
 
 # รายชื่อคู่หลักฐานที่ถูกต้อง (จับคู่สลับสลับซ้าย-ขวาได้)
 var valid_pairs: Array = [
-	["C1", "C3"],
-	["C2", "C5"]
+	["C1", "C8"],
+	["C1", "C9"],
+	["C3", "C11"],
+	["C4", "C10"],
+	["C5", "C6"],
+	["C6", "C12"],
+	["C11", "C12"],
 ]
 
 # บันทึกเส้นที่เชื่อมสำเร็จแล้ว [{ "card_a": card1, "card_b": card2, "line": line_node }]
@@ -28,11 +35,21 @@ var pan_offset: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
+	#LocationManager.unlock_location("weissindustrial")
+	#QuestManager.start_quest("back_to_office")
 	#EvidenceManager.unlock_evidence("C1")
 	#EvidenceManager.unlock_evidence("C2")
 	#EvidenceManager.unlock_evidence("C3")
 	#EvidenceManager.unlock_evidence("C4")
 	#EvidenceManager.unlock_evidence("C5")
+	#EvidenceManager.unlock_evidence("C6")
+	#EvidenceManager.unlock_evidence("C7")
+	#videnceManager.unlock_evidence("C8")
+	#EvidenceManager.unlock_evidence("C9")
+	#videnceManager.unlock_evidence("C10")
+	#videnceManager.unlock_evidence("C11")
+	#EvidenceManager.unlock_evidence("C12")
+	
 	_load_evidence_cards()
 	update_culprit_reveal()
 
@@ -131,6 +148,11 @@ func _create_permanent_line(card_a: EvidenceCard, card_b: EvidenceCard) -> void:
 	
 	update_culprit_reveal()
 
+	if active_connections.size() >= valid_pairs.size():
+		board_completed.emit()
+	else:
+		correct_pair_found.emit(card_a.evidence_id, card_b.evidence_id)
+
 
 func _get_card_center(card: EvidenceCard) -> Vector2:
 	return card.position + (card.size / 2)
@@ -183,6 +205,13 @@ func _load_evidence_cards() -> void:
 		else:
 			evidence_hand.add_child(card)
 			card.board = placed_cards
+			
+		print(
+			"Evidence: ", evidence.evidence_id,
+			" | size = ", card.size,
+			" | scale = ", card.scale,
+			" | min_size = ", card.custom_minimum_size
+		)
 
 		card.setup(evidence)
 

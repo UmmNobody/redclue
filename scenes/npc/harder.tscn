@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dk15unyufudu6"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_0y40y"]
+[ext_resource type="Script" uid="uid://dkhr6f7egvnpu" path="res://scripts/npc/harder.gd" id="2_bobfr"]
+[ext_resource type="Texture2D" uid="uid://83pywyhtiy8a" path="res://assets/interactable_png/factory_interact_png/enmund.png" id="2_hnsl4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gkrr"]
+
+[node name="harder" unique_id=1816552023 instance=ExtResource("1_0y40y")]
+script = ExtResource("2_bobfr")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_1gkrr")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("2_hnsl4")
+
+[node name="Marker2D" type="Marker2D" parent="." index="2" unique_id=517915285]

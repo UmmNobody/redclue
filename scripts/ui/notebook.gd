@@ -95,11 +95,13 @@ func _on_close_button_pressed() -> void:
 # Quest & Evidence Page
 
 func _show_quest_page() -> void:
+	SfxManager.play_sfx("page")
 	quest_page.show()
 	evidence_page.hide()
 
 
 func _show_evidence_page() -> void:
+	SfxManager.play_sfx("page")
 	quest_page.hide()
 	evidence_page.show()
 
@@ -109,6 +111,7 @@ func _previous_evidence_page() -> void:
 		return
 
 	current_page -= 1
+	SfxManager.play_sfx("page")
 	refresh_evidence()
 
 func _next_evidence_page() -> void:
@@ -122,6 +125,7 @@ func _next_evidence_page() -> void:
 		return
 
 	current_page += 1
+	SfxManager.play_sfx("page")
 	refresh_evidence()
 	
 func refresh_evidence() -> void:

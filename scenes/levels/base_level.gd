@@ -16,3 +16,7 @@ func _set_player_spawn() -> void:
 		var spawn_point: Marker2D = get_parent().get_node("InitialPlayerSpawn")
 
 		player.global_position = spawn_point.global_position
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/main.tscn")

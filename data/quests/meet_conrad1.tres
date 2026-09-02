@@ -11,8 +11,9 @@ metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
 
 [resource]
 script = ExtResource("2_emhvu")
-quest_id = "meet_conrad"
+quest_id = "meet_conrad1"
 quest_name = "ไปหา Conrad Weiss"
 description = "เดินทางไปสำนักงาน Weiss Industrial เพื่อสอบถาม Conrad"
 objectives = Array[ExtResource("1_cll1j")]([SubResource("Resource_cncfu")])
+quest_order = 11
 metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

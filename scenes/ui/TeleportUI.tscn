@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://csar4h2be3vcs" path="res://scripts/ui/teleport_location_button.gd" id="1_cegrh"]
 [ext_resource type="Script" uid="uid://bw68j4rpp13on" path="res://scripts/ui/teleport_ui.gd" id="1_w0kvl"]
+[ext_resource type="Texture2D" uid="uid://bslfhjnddd1e3" path="res://assets/ui/UI_Map/Map.png" id="2_vka3t"]
+[ext_resource type="Texture2D" uid="uid://ddacm1spra5km" path="res://assets/ui/UI_Map/My office pin.png" id="3_bduma"]
+[ext_resource type="Texture2D" uid="uid://ch1x26drt4b12" path="res://assets/ui/UI_Map/Factory pin.png" id="5_62y7e"]
+[ext_resource type="Texture2D" uid="uid://cp73ef18bv5m2" path="res://assets/ui/UI_Map/Bar pin.png" id="6_2h2vo"]
+[ext_resource type="Texture2D" uid="uid://eer0pawoojdw" path="res://assets/ui/UI_Map/FilmStore pin.png" id="7_stwus"]
+[ext_resource type="Texture2D" uid="uid://bgnnyxi1vce8j" path="res://assets/ui/UI_Map/Ingrid House pin.png" id="8_1wyx7"]
+[ext_resource type="Texture2D" uid="uid://gx4bvtnorvq0" path="res://assets/ui/UI_Map/Weiss industrial pin.png" id="9_70xuc"]
+[ext_resource type="Texture2D" uid="uid://vmg53goa5iqs" path="res://assets/ui/UI_Map/Hallo way pin.png" id="10_jg5xb"]
 
 [node name="TeleportUi" type="Control" unique_id=671122715 groups=["TeleportUI"]]
 layout_mode = 3
@@ -10,92 +18,104 @@ offset_right = 320.0
 offset_bottom = 180.0
 script = ExtResource("1_w0kvl")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1203512963]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 0.627451)
+
 [node name="Map" type="TextureRect" parent="." unique_id=500782332]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 310.0
-offset_bottom = 170.0
-
-[node name="Title" type="Label" parent="Map" unique_id=256440292]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 8
-text = "Map"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -19.0
+offset_top = -9.0
+offset_right = 301.0
+offset_bottom = 171.0
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_vka3t")
 
 [node name="OfficeButton" type="Button" parent="Map" unique_id=1053975755]
 layout_mode = 0
-offset_left = 82.0
-offset_top = 39.0
-offset_right = 113.0
-offset_bottom = 59.0
+offset_left = 169.0
+offset_top = 22.0
+offset_right = 259.0
+offset_bottom = 47.0
 theme_override_font_sizes/font_size = 8
-text = "Office"
+icon = ExtResource("3_bduma")
+flat = true
 script = ExtResource("1_cegrh")
 location_id = "office"
 
 [node name="FactoryButton" type="Button" parent="Map" unique_id=380369724]
 layout_mode = 0
-offset_left = 197.0
-offset_top = 32.0
-offset_right = 234.0
-offset_bottom = 52.0
+offset_left = 152.0
+offset_top = 136.0
+offset_right = 242.0
+offset_bottom = 161.0
 theme_override_font_sizes/font_size = 8
-text = "Factory"
+icon = ExtResource("5_62y7e")
+flat = true
 script = ExtResource("1_cegrh")
 location_id = "factory"
 
-[node name="FilmStoreButton" type="Button" parent="Map" unique_id=259336691]
-layout_mode = 0
-offset_left = 127.0
-offset_top = 67.0
-offset_right = 172.0
-offset_bottom = 87.0
-theme_override_font_sizes/font_size = 8
-text = "FilmStore"
-script = ExtResource("1_cegrh")
-location_id = "filmstore"
-
 [node name="BarButton" type="Button" parent="Map" unique_id=1735831783]
 layout_mode = 0
-offset_left = 214.0
-offset_top = 74.0
-offset_right = 259.0
-offset_bottom = 94.0
+offset_left = 141.0
+offset_top = 112.0
+offset_right = 231.0
+offset_bottom = 137.0
 theme_override_font_sizes/font_size = 8
-text = "bar"
+icon = ExtResource("6_2h2vo")
+flat = true
 script = ExtResource("1_cegrh")
 location_id = "bar"
 
+[node name="FilmStoreButton" type="Button" parent="Map" unique_id=259336691]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 96.0
+offset_right = 277.0
+offset_bottom = 121.0
+theme_override_font_sizes/font_size = 8
+icon = ExtResource("7_stwus")
+flat = true
+script = ExtResource("1_cegrh")
+location_id = "filmstore"
+
 [node name="IngridButton" type="Button" parent="Map" unique_id=1788636563]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 77.0
-offset_right = 77.0
-offset_bottom = 97.0
+offset_left = 88.0
+offset_top = 41.0
+offset_right = 178.0
+offset_bottom = 66.0
 theme_override_font_sizes/font_size = 8
-text = "IngridHouse"
+icon = ExtResource("8_1wyx7")
+flat = true
 script = ExtResource("1_cegrh")
 location_id = "ingridhouse"
 
 [node name="WeissButton" type="Button" parent="Map" unique_id=1365337881]
 layout_mode = 0
-offset_left = 121.0
-offset_top = 115.0
-offset_right = 177.0
-offset_bottom = 135.0
+offset_left = 229.0
+offset_top = 47.0
+offset_right = 319.0
+offset_bottom = 72.0
 theme_override_font_sizes/font_size = 8
-text = "WeissIndustrial"
+icon = ExtResource("9_70xuc")
+flat = true
 script = ExtResource("1_cegrh")
 location_id = "weissindustrial"
+
+[node name="HallowayButton" type="Button" parent="Map" unique_id=110947834]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 73.0
+offset_right = 274.0
+offset_bottom = 98.0
+theme_override_font_sizes/font_size = 8
+icon = ExtResource("10_jg5xb")
+flat = true
+script = ExtResource("1_cegrh")
+location_id = "halloway"
 
 [node name="CloseButton" type="Button" parent="." unique_id=1559802365]
 layout_mode = 1

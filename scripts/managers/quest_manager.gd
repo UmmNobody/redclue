@@ -26,6 +26,11 @@ var all_quests: Dictionary = {}
 func _ready() -> void:
 	load_quests()
 
+func restart_quest_manager() -> void:
+	current_quest = null
+	active_quests.clear()
+	completed_quests.clear()
+	objective_states.clear()
 
 # =========================================================
 # Quest Loading

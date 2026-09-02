@@ -8,6 +8,7 @@ signal location_selected(location_id: String)
 @onready var bar_button: Button = $Map/BarButton
 @onready var ingrid_button: Button = $Map/IngridButton
 @onready var weiss_button: Button = $Map/WeissButton
+@onready var halloway_button: Button = $Map/HallowayButton
 
 func _ready() -> void:
 	visible = false
@@ -18,6 +19,7 @@ func _ready() -> void:
 	bar_button.pressed.connect(_on_location_pressed.bind("bar"))
 	ingrid_button.pressed.connect(_on_location_pressed.bind("ingridhouse"))
 	weiss_button.pressed.connect(_on_location_pressed.bind("weissindustrial"))
+	halloway_button.pressed.connect(_on_location_pressed.bind("halloway"))
 
 	refresh_locations()
 
@@ -38,6 +40,7 @@ func refresh_locations() -> void:
 	bar_button.disabled = not LocationManager.is_location_unlocked("bar")
 	ingrid_button.disabled = not LocationManager.is_location_unlocked("ingridhouse")
 	weiss_button.disabled = not LocationManager.is_location_unlocked("weissindustrial")
+	halloway_button.disabled = not LocationManager.is_location_unlocked("halloway")
 
 func _on_location_pressed(location_id: String) -> void:
 	close()

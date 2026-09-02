@@ -21,6 +21,6 @@ func ended() -> void:
 func dialogic_signal(argument: String) :
 	if argument == "get_evidence_c7_c12":
 		EvidenceManager.unlock_evidence("C7")
-		EvidenceManager.unlock_evidence("C12")
 		QuestManager.complete_objective("meet_elias", "meet_elias1")
 		QuestManager.start_quest("meet_ingrid")
+		LocationManager.unlock_location("ingridhouse")

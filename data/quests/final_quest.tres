@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://h6o73jy071hd"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_gi1kl"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_q6tr8"]
+
+[sub_resource type="Resource" id="Resource_3l13m"]
+script = ExtResource("1_gi1kl")
+objective_id = "final_quest1"
+description = "เผชิญหน้ากับ Conrad Weiss"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_q6tr8")
+quest_id = "final_quest"
+quest_name = "เผชิญหน้ากับ Conrad Weiss"
+description = "ไปที่ Weiss Industrial เพื่อเผชิญหน้ากับ Conrad Weiss คนร้ายที่แท้จริงผู้ลอบสังหาร Victor ด้วยวิธีการวางยา"
+objectives = Array[ExtResource("1_gi1kl")]([SubResource("Resource_3l13m")])
+quest_order = 16
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

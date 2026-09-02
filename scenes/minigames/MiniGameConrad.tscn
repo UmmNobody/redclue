@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dlyy1nwkb3wrf"]
+
+[ext_resource type="Script" uid="uid://d3c2yhdcwkaa2" path="res://scripts/minigames/mini_game_conrad.gd" id="1_tfw58"]
+
+[node name="MiniGameConrad" type="Control" unique_id=1760668812 groups=["MinigameConrad"]]
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tfw58")
+
+[node name="Background" type="TextureRect" parent="." unique_id=485053806]
+custom_maximum_size = Vector2(320, 180)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TimeBar" type="ProgressBar" parent="." unique_id=381577285]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 12.0
+offset_right = 130.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+max_value = 60.0
+value = 30.0
+show_percentage = false

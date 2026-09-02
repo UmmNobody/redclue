@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bd3ncbu568qxl"]
+
+[ext_resource type="Script" uid="uid://cq1bepilhw43m" path="res://scripts/cutscenes/game_win_cutscene.gd" id="1_7lw4n"]
+
+[node name="GameWinCutscene" type="Control" unique_id=1144075555 groups=["GameWinCutscene"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_7lw4n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1625047443]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)

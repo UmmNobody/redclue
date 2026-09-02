@@ -1,0 +1,10 @@
+receptionist: "สวัดดีค่ะ มีอะไรให้ช่วยไหมคะ"
+david: "สวัดดีผม Devid Reed เป็นนักสืบมาขอเข้าพบคุณ Corad Weiss หน่อย"
+receptionist: "กรุณารอสักครู่นะค่ะ"
+พนักงงานต้อนรับติดต่อหา Conrad Weiss...
+receptionist: "..."
+receptionist: "คุณ Weiss บอกว่าให้คุณไปพบเข้าได้ที่ห้องทำงานส่วนตัวได้เลยค่ะ"
+receptionist: "เดินเข้าไปข้างใน จากนั้นห้องทำงานส่วนตัวของคุณ Weiss จะอยู่ด้านในสุดค่ะ"
+david: "ขอบใจมาก"
+receptionist: "ยินดีที่รับใช่ค่ะ"
+[signal arg="reception"]

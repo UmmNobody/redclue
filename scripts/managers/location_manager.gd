@@ -20,13 +20,17 @@ var locations: Dictionary = {
 	},
 	"weissindustrial": {
 		"scene_path": "res://scenes/levels/weissindustrial.tscn"
+	},
+	"halloway": {
+		"scene_path": "res://scenes/levels/halloway.tscn"
 	}
 }
 
 var unlocked_locations: Dictionary = {}
 
-func _ready() -> void:
-	unlock_location("office")
+
+func restart_location_manager() -> void:
+	unlocked_locations.clear()
 
 func unlock_location(location_id: String) -> void:
 	if not locations.has(location_id):

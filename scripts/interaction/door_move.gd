@@ -9,6 +9,7 @@ func start_not_started_interaction() -> void:
 
 func start_active_interaction() -> void:
 	if teleport_marker:
+		SfxManager.play_sfx("door")
 		player.global_position = teleport_marker.global_position
 		GameManager.room_changed.emit()
 	else:
@@ -16,6 +17,7 @@ func start_active_interaction() -> void:
 
 func start_completed_interaction() -> void:
 	if teleport_marker:
+		SfxManager.play_sfx("door")
 		player.global_position = teleport_marker.global_position
 		GameManager.room_changed.emit()
 	else:

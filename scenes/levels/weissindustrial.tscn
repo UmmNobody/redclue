@@ -1,86 +1,109 @@
 [gd_scene format=3 uid="uid://d05du1dwchgix"]
 
+[ext_resource type="Script" uid="uid://ci66cwscqkb58" path="res://scenes/levels/weissindustrial.gd" id="1_nebef"]
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_sxifc"]
-[ext_resource type="Texture2D" uid="uid://net2wlhid2u4" path="res://assets/maps/weiss_f1.png" id="1_xbouy"]
-[ext_resource type="Texture2D" uid="uid://da07g1nj71a27" path="res://assets/maps/weiss_f2-1.png" id="2_52cvg"]
-[ext_resource type="Texture2D" uid="uid://dam30ldp3b830" path="res://assets/maps/weiss_f2-2.png" id="3_52cvg"]
+[ext_resource type="Texture2D" uid="uid://db6yv6pxx0mrn" path="res://assets/new_image/Weiss-Lobby/weiss-Lobby.png" id="2_378gb"]
+[ext_resource type="Texture2D" uid="uid://fhtq7qhv2orr" path="res://assets/new_image/Weiss-in-room/Weiss-in-room.png" id="3_5kf4u"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_vvrmm"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="5_k5o8j"]
-[ext_resource type="Texture2D" uid="uid://dxgdavp2tdxvv" path="res://assets/interactable_png/weiss_interact_png/lift.png" id="6_2w8tn"]
-[ext_resource type="Texture2D" uid="uid://cee3d26wy25pv" path="res://assets/interactable_png/factory_interact_png/door_f21_to_f22.png" id="7_2w8tn"]
+[ext_resource type="Texture2D" uid="uid://n6rj5c1anbhu" path="res://assets/new_image/Weiss-Lobby/Door1-Weiss-lobby.png" id="5_mbi4t"]
+[ext_resource type="PackedScene" uid="uid://cjvambbt54tpm" path="res://scenes/npc/receptionist.tscn" id="5_uwjxx"]
+[ext_resource type="PackedScene" uid="uid://cpb5e7hvxnli3" path="res://scenes/npc/conrad.tscn" id="6_k1pj6"]
+[ext_resource type="Texture2D" uid="uid://qhom8qyu55ka" path="res://assets/new_image/Weiss-in-room/Door-Weiss-inRoom.png" id="9_378gb"]
+[ext_resource type="PackedScene" uid="uid://dpuss1pgupatr" path="res://scenes/triggers/conrad_trigger_1.tscn" id="10_1mmcy"]
+[ext_resource type="Texture2D" uid="uid://cerqsuu5fqgt2" path="res://assets/new_image/Weiss-Lobby/Door2-weiss-lobby.png" id="10_378gb"]
+[ext_resource type="PackedScene" uid="uid://bxksx5uwr0emp" path="res://scenes/triggers/conrad_trigger_2.tscn" id="11_hkhee"]
+[ext_resource type="PackedScene" uid="uid://baxjkndtkjcji" path="res://scenes/triggers/holm_trigger_2.tscn" id="11_nebef"]
+[ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="15_5kf4u"]
 
 [node name="Weissindustrial" type="Node2D" unique_id=919028447]
+script = ExtResource("1_nebef")
 
 [node name="f1" type="Sprite2D" parent="." unique_id=786555312]
 position = Vector2(495, -261)
-texture = ExtResource("1_xbouy")
-
-[node name="f21" type="Sprite2D" parent="." unique_id=2007981389]
-position = Vector2(1491, -259)
-texture = ExtResource("2_52cvg")
+texture = ExtResource("2_378gb")
 
 [node name="f22" type="Sprite2D" parent="." unique_id=941937702]
-position = Vector2(2365, -259)
-texture = ExtResource("3_52cvg")
+position = Vector2(1429, -261)
+texture = ExtResource("3_5kf4u")
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=724618447]
-position = Vector2(278, -240)
+position = Vector2(257, -238)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=205925919]
 
 [node name="office_door" parent="Interactables" unique_id=1816552023 instance=ExtResource("4_vvrmm")]
-position = Vector2(259, -244)
-required_quest_id = ""
-short_message = "เสียงโทรศัพท์ยังดังไม่หยุด ... ไปรับโทรศัพท์ก่อนดีกว่า"
+position = Vector2(230, -250)
+required_quest_id = "meet_harder"
+short_message = "ไปหา Conrad Weiss ก่อนละกัน"
 
 [node name="Sprite2D" parent="Interactables/office_door" index="1" unique_id=523219159]
-flip_h = true
+texture = ExtResource("5_mbi4t")
+
+[node name="receptionist" parent="Interactables" unique_id=2085742251 instance=ExtResource("5_uwjxx")]
+position = Vector2(306, -250)
+required_quest_id = "meet_conrad1"
+
+[node name="conrad" parent="Interactables" unique_id=917037527 instance=ExtResource("6_k1pj6")]
+position = Vector2(1465, -252)
+required_quest_id = "final_quest"
 
 [node name="Doors" type="Node2D" parent="." unique_id=1921127279]
 
 [node name="door_move" parent="Doors" unique_id=1735786032 instance=ExtResource("5_k5o8j")]
-position = Vector2(690, -248)
+position = Vector2(555, -250)
+required_quest_id = "meet_conrad2"
+short_message = "ห้องทำงานของ Conrad อยู่ตรงไหนกันนะ ฉันควรจะไปลองถามพนักงานต้อนรับดูก่อน"
 
 [node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
-texture = ExtResource("6_2w8tn")
+texture = ExtResource("9_378gb")
 
 [node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
-position = Vector2(643, 8)
-
-[node name="door_move2" parent="Doors" unique_id=1368124781 instance=ExtResource("5_k5o8j")]
-position = Vector2(1333, -246)
-
-[node name="Sprite2D" parent="Doors/door_move2" index="1" unique_id=523219159]
-texture = ExtResource("6_2w8tn")
-
-[node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
-position = Vector2(-643, 6)
-
-[node name="door_move3" parent="Doors" unique_id=1968329298 instance=ExtResource("5_k5o8j")]
-position = Vector2(1710, -243)
-
-[node name="Sprite2D" parent="Doors/door_move3" index="1" unique_id=523219159]
-texture = ExtResource("7_2w8tn")
-
-[node name="TeleportMarker" parent="Doors/door_move3" index="2" unique_id=242310348]
-position = Vector2(564, 7)
+position = Vector2(786, 12)
 
 [node name="door_move4" parent="Doors" unique_id=1873298451 instance=ExtResource("5_k5o8j")]
-position = Vector2(2258, -243)
+position = Vector2(1341, -249)
 
 [node name="Sprite2D" parent="Doors/door_move4" index="1" unique_id=523219159]
-texture = ExtResource("7_2w8tn")
+texture = ExtResource("10_378gb")
 flip_h = true
 
 [node name="TeleportMarker" parent="Doors/door_move4" index="2" unique_id=242310348]
-position = Vector2(-564, 7)
+position = Vector2(-786, 11)
 
 [node name="Eventtriggers" type="Node2D" parent="." unique_id=416070284]
 
+[node name="conrad_trigger1" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("10_1mmcy")]
+position = Vector2(1417, -246)
+event_id = "conrad_trigger1"
+required_quest_id = "meet_conrad2"
+
+[node name="conrad_trigger2" parent="Eventtriggers" unique_id=122782774 instance=ExtResource("11_hkhee")]
+position = Vector2(1388, -246)
+event_id = "conrad_trigger2"
+required_completed_quest_id = "meet_conrad2"
+
+[node name="holm_trigger_2" parent="Eventtriggers" unique_id=1982217721 instance=ExtResource("11_nebef")]
+position = Vector2(489, -248)
+event_id = "holm_trigger_2"
+required_completed_quest_id = "meet_conrad2"
+
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_sxifc")]
+
+[node name="Walls" type="Node2D" parent="." unique_id=703649153]
+
+[node name="Wall" parent="Walls" unique_id=713871130 instance=ExtResource("15_5kf4u")]
+position = Vector2(220, -252)
+
+[node name="Wall2" parent="Walls" unique_id=1349285470 instance=ExtResource("15_5kf4u")]
+position = Vector2(603, -250)
+
+[node name="Wall3" parent="Walls" unique_id=783562433 instance=ExtResource("15_5kf4u")]
+position = Vector2(1282, -250)
+
+[node name="Wall4" parent="Walls" unique_id=1250230414 instance=ExtResource("15_5kf4u")]
+position = Vector2(1561, -250)
 
 [editable path="Interactables/office_door"]
 [editable path="Doors/door_move"]
-[editable path="Doors/door_move2"]
-[editable path="Doors/door_move3"]
 [editable path="Doors/door_move4"]

@@ -1,0 +1,94 @@
+ต้อน Conrad ให้จนมุม\
+เวลาจำกัด\: 120 วินาที (ต้องตอบถูกทุกข้อ)\
+บทลงโทษ\: ตอบผิด -15 วินาที\
+ล้มเหลว\: หากเวลาหมด Conrad จะหนีไปได้
+เริ่ม!!
+[signal arg="start_conrad_countdown"]
+label question1
+david: "เริ่มต้นด้วย..."
+- คำให้การของ Eilas
+	join c7 center [animation="Fade In Up"]
+	david: "จากคำให้การของ Eilas เขาบอกว่าเขาเคยเห็นใครบางคนไปเผาอะไรซักอย่างที่หลังโรงงานในเวลากลางคืน"
+	conrad: "แล้วยังไงหละ ก็ไม่เห็นจะเกี่ยวอะไรกับผมเลย"
+	david: "..."
+	leave c7 [animation="Fade Out Down"]
+	[signal arg="wrong"]
+	jump question1
+- บุหรี่ยี่ห่อ Norvik ที่อยู่ข้างโรงงาน
+	join c6 center [animation="Fade In Up"]
+	david: "ผมเจอบุหรี่นี้อยู่ที่ข้างโรงงาน มันถูกทิ้งมาจากหน้าต่างห้องควบคุม"
+	conrad: "บุหรี่ยี่ห่อ Norvik ผมไม่ได้สูบแต่ยี่ห่อนี้สะหน่อย"
+	david: "..."
+	leave c6 [animation="Fade Out Down"]
+	[signal arg="wrong"]
+	jump question1
+- แฟ้มรายชื่อในสถานที่เกิดเหตุ
+	join c4 left [animation="Fade In Up"]
+	join c10 right [animation="Fade In Up"]
+	david: "นี้คือแฟ้มรายชื่อที่เจอในสถานที่เกิดเหตุ ซึ่งรายมือตรงกับ Victor"
+	david: "ในนั้นมีรายชื่อของคนที่เขาไม่ไว้ใจซึ่งมีชื่อของคุณอยู่ด้วย ดังนั้นคุณคือคนที่ Victor สงสัยว่าอาจจะเป็นผู้อยู่เบื้องหลังบัญชีปลอม"
+	conrad: "ในแฟ้มนั้นก็ยังมีชื่อของ Elias และ Ingrid อยู่ด้วย ทำไมคุณถึงไม่คิดว่าเป็นสองคนนั้นหละ"
+	david: "แล้วคุณรู้ราชื่อในแฟ้มนั้นได้ไง"
+	conrad: "..."
+	leave c4 [animation="Fade Out Down"]
+	leave c10 [animation="Fade Out Down"]
+label question2
+david: "หลักฐานที่ 2 ที่ฉันควรเอามาแสดงคือ..."
+- เศษกระดาษรหัส KONS 7-B
+	join c1 left [animation="Fade In Up"]
+	join C9 right [animation="Fade In Up"]
+	david: "ตอนที่ผมเอารหัสนี้ให้คุณดู คุณสามารถจำรหัสบัญชี KONS 7-B ได้ทันทีที่เห็น ทั้งที่มันถูกปิดไปนานแล้ว"
+	conrad: "ผมบริหารโรงงานนี้มาสิบห้าปี Reed จำอะไรได้เยอะเป็นเรื่องปกติ"
+	david: "แต่ด้วยหน้าที่ตำแหน่งของคุณก็ไม่ได้มายุ่งกับบัญชี แต่คุณกลับจำได้"
+	david: "คนที่จำรหัสบัญชีปลอมได้แม่นขนาดนั้น ก็คงมีแต่คนที่สร้างมันขึ้นมาเองใช่ไหม"
+	conrad: "..."
+	leave c1 [animation="Fade Out Down"]
+	leave C9 [animation="Fade Out Down"]
+- กาต้มน้ำและตะกอนปริศนา
+	join c3 center [animation="Fade In Up"]
+	david: "ผมเจอกาต้มน้ำนี้ที่สถานที่เกิดเหตุ และตอนไปถึงมันยังอุ่นอยู่เลย"
+	conrad: "จริงหลอ Garret ยามที่เฝ้าโรงงานเป็นคนใช้หรือเปล่า"
+	david: "..."
+	leave c3 [animation="Fade In Down"]
+	[signal arg="wrong"]
+	jump question2
+- บัตรพนักงานของ Victor
+	join c2 center [animation="Fade In Up"]
+	david: "ผมเจอบัตรพนักงงานของ Victor ในกระเป๋าเสื้อของเขา"
+	conrad: "เขายังพกมันติดตัวอยู่งั้นหลอ ผมค่อนข้างแปลกใจเลยนะ"
+	david: "..."
+	leave c2 [animation="Fade Out Down"]
+	[signal arg="wrong"]
+	jump question2
+label question3
+david: "จากนั้นก็ด้วยสิ่งนี้"
+- คำให้การของ Garret
+	join c5 center [animation="Fade In Up"]
+	david: "Garret บอกว่าเขาได้กลิ่นควันแปลกๆ ที่บันได"
+	conrad: "กลิ่นแปลกๆ แล้วมันเกี่ยวอะไรกับผม"
+	david: "..."
+	leave c5 [animation="Fade Out Down"]
+	[signal arg="wrong"]
+	jump question3
+- บันทึกการซื้อยาที่ร้าน Halloway
+	join c11 center [animation="Fade In Up"]
+	david: "นามแฝง H. Crane สั่งซื้อ Monkshood สมุนไพรมีพิษเมื่อสามอาทิตย์ก่อน ให้ที่อยู่เป็นโรงงานนี้"
+	conrad: "ให้ส่งมาที่โรงงานนี้หลอ H. Crane ผมไม่คุ้นชื่อนี้เลย"
+	david: "แถมคนซื้อยังมีแต่งตัวดีชอบสูบบุหรี่ราคาแพงอีกด้วย คนในโรงงานนี้ที่แต่งตัวดีและมีเงินสูบบุหรี่แพงๆ ก็คงมีแต่ระดับหัวหน้าใช่ไหม"
+	conrad: "..."
+	leave c11 [animation="Fade Out Down"]
+- Ingrid ส่งเอกสารให้ Victor
+	join c8 center
+	david: "Ingrid เอาเอกสารบัญชีแปลกๆ ให้ Victor หลังจากนั้นเขาก็ไม่ได้กลับมาหาเธออีกเลย"
+	conrad: "ผมเสียใจกับการจากไปของ Victor จริงๆ"
+	david: "..."
+	leave c8 [animation="Fade Out Down"]
+	[signal arg="wrong"]
+	jump question3
+david: "ได้เวลาจบเรื่องนี้แล้ว"
+- ผลวิเคราะห์ตะกอนในแก้วของ Harder
+	david: "จากผลการวิเคราะห์ของ Harder Victor เสียชีวิตจากสารพิษที่พบเป็นตะกอนในแก้วน้ำที่มีชื่อว่า Aconitine ซึ่งสามารถสกัดได้จากสมุนไพรมีพิษที่ชื่อ Monkshood"
+	david: "แต่ถว่าการสกัด  Aconitine นั้นไม่ได้ทำได้ง่ายๆ ต้องเป็นคนที่มีความรู้เรื่องพฤกษเคมีเป็นอย่างดี ซึ่งคุณเรียนเคมีอุตสาหกรรมก่อนจะมาทำงานที่นี้"
+	conrad: "..."
+conrad: "…คุณฉลาดกว่าที่ผมคิดไว้จริงๆ Reed"
+[signal arg="win"]

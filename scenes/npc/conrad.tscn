@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cpb5e7hvxnli3"]
+
+[ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_wu6ea"]
+[ext_resource type="Script" uid="uid://d3fdnwh27fumj" path="res://scripts/npc/conrad.gd" id="2_0tl0l"]
+[ext_resource type="Texture2D" uid="uid://bdpxnd1whckd6" path="res://assets/new_image/Weiss-in-room/Conrad.png" id="3_e137e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uwjxx"]
+
+[node name="conrad" unique_id=1816552023 instance=ExtResource("1_wu6ea")]
+script = ExtResource("2_0tl0l")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=783111100]
+shape = SubResource("RectangleShape2D_uwjxx")
+
+[node name="Sprite2D" parent="." index="1" unique_id=523219159]
+texture = ExtResource("3_e137e")

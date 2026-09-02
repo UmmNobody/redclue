@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b4rs1jsbem5tu"]
+
+[ext_resource type="Script" uid="uid://vdbnpyhwvhi5" path="res://scripts/cutscenes/game_over_cutscene.gd" id="1_ix887"]
+
+[node name="GameOverCutscene" type="Control" unique_id=1316985411 groups=["GameOverCutscene"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_ix887")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1815321571]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)

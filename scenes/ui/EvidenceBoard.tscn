@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://niql73s8sgai"]
 
 [ext_resource type="Script" uid="uid://seh8q00vn2r6" path="res://scripts/ui/evidence_board.gd" id="1_o68sj"]
-[ext_resource type="Texture2D" uid="uid://cmg0hd86ix5ph" path="res://assets/evidences_png/c_1.png" id="2_q3hc6"]
+[ext_resource type="Texture2D" uid="uid://bofn0mdanaeqi" path="res://assets/evidences_png/Conrad-Image.png" id="2_q3hc6"]
+[ext_resource type="Texture2D" uid="uid://dnpsul1o4uqwh" path="res://assets/ui/Board.png" id="2_v5ke0"]
 
 [node name="EvidenceBoard" type="Control" unique_id=1314747732]
 layout_mode = 3
@@ -9,6 +10,21 @@ anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 180.0
 script = ExtResource("1_o68sj")
+
+[node name="bg" type="TextureRect" parent="." unique_id=1971415087]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v5ke0")
 
 [node name="Board" type="Control" parent="." unique_id=578140018]
 custom_minimum_size = Vector2(640, 360)
@@ -42,6 +58,7 @@ grow_vertical = 2
 
 [node name="CulpritSprite" type="Sprite2D" parent="Board" unique_id=59039727]
 position = Vector2(319, 173)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_q3hc6")
 
 [node name="Hand" type="Control" parent="." unique_id=1388464959]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dpuss1pgupatr"]
+
+[ext_resource type="PackedScene" uid="uid://d1tqf738dvn76" path="res://scenes/triggers/event_trigger.tscn" id="1_rmo4e"]
+[ext_resource type="Script" uid="uid://dj7fmfxk4mpx7" path="res://scripts/triggers/conrad_trigger_1.gd" id="2_qji71"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1mmcy"]
+size = Vector2(24, 62)
+
+[node name="conrad_trigger1" unique_id=160060719 instance=ExtResource("1_rmo4e")]
+script = ExtResource("2_qji71")
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=21895147]
+shape = SubResource("RectangleShape2D_1mmcy")

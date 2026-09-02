@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bqey8mvoprmqf"]
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_7dudh"]
-[ext_resource type="Texture2D" uid="uid://4wplullxejyj" path="res://assets/interactable_png/office_interact_png/telephone.png" id="2_iwahh"]
 [ext_resource type="Script" uid="uid://bdv4y1m8id488" path="res://scripts/interaction/telephone.gd" id="2_vn46w"]
+[ext_resource type="Texture2D" uid="uid://c1eiiouirur05" path="res://assets/new_image/Office/Phon-office.png" id="3_iwahh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_42m1g"]
 size = Vector2(17, 7)
@@ -15,4 +15,4 @@ required_quest_id = "meet_enmund"
 shape = SubResource("RectangleShape2D_42m1g")
 
 [node name="Sprite2D" parent="." index="1" unique_id=523219159]
-texture = ExtResource("2_iwahh")
+texture = ExtResource("3_iwahh")

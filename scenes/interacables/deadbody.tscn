@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bapafw2tt3w2b"]
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_x40np"]
-[ext_resource type="Texture2D" uid="uid://mn6rqnc8px1k" path="res://assets/interactable_png/factory_interact_png/victor_dead_body.png" id="2_hvdc4"]
 [ext_resource type="Script" uid="uid://difgixi7lq5ih" path="res://scripts/interaction/deadbody.gd" id="2_ioftp"]
+[ext_resource type="Texture2D" uid="uid://cycaxn5v2qtec" path="res://assets/new_image/Factory-F2-2/Victor.png" id="3_hvdc4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brlfu"]
 size = Vector2(32, 9)
@@ -15,4 +15,4 @@ required_quest_id = "check_body"
 shape = SubResource("RectangleShape2D_brlfu")
 
 [node name="Sprite2D" parent="." index="1" unique_id=523219159]
-texture = ExtResource("2_hvdc4")
+texture = ExtResource("3_hvdc4")

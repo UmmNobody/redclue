@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b8fsvby1643ll"]
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_6kdje"]
-[ext_resource type="Texture2D" uid="uid://dsu4nxglee0k0" path="res://assets/interactable_png/factory_interact_png/cup_pot.png" id="2_lrx4i"]
 [ext_resource type="Script" uid="uid://bnhmsnpkuvf3v" path="res://scripts/interaction/cup_pot.gd" id="2_m4il0"]
+[ext_resource type="Texture2D" uid="uid://c8lmsgeu2ffag" path="res://assets/new_image/Sprite-0041.png" id="3_lrx4i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0abr"]
 
@@ -14,4 +14,4 @@ required_quest_id = "explore_room1"
 shape = SubResource("RectangleShape2D_w0abr")
 
 [node name="Sprite2D" parent="." index="1" unique_id=523219159]
-texture = ExtResource("2_lrx4i")
+texture = ExtResource("3_lrx4i")

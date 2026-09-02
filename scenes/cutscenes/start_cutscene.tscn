@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ci4jsxwvuqagk"]
+
+[ext_resource type="Script" uid="uid://c4i7hbou414il" path="res://scripts/cutscenes/start_cutscene.gd" id="1_qlls3"]
+
+[node name="StartCutscene" type="Control" unique_id=826324604]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
+script = ExtResource("1_qlls3")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1462539707]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)

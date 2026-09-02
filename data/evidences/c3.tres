@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Evidence" format=3 uid="uid://ckuvd6epuvw67"]
 
-[ext_resource type="Texture2D" uid="uid://c4sqs83j2hir" path="res://assets/evidences_png/c_3.png" id="1_1wlcv"]
+[ext_resource type="Texture2D" uid="uid://ca8hbday7ejgr" path="res://assets/evidences_png/C-003.png" id="1_1wlcv"]
 [ext_resource type="Script" uid="uid://cje680fcrh0bk" path="res://scripts/evidence/evidence.gd" id="2_yjdil"]
 
 [resource]
 script = ExtResource("2_yjdil")
 evidence_id = "C3"
-evidence_name = "หลักฐานชิ้นที่ 3"
+evidence_name = "กาต้มน้ำ / ตะกอน"
 description = "หลักฐานชิ้นที่ 3 ..."
 image = ExtResource("1_1wlcv")
 metadata/_custom_type_script = "uid://cje680fcrh0bk"

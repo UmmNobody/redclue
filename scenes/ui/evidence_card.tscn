@@ -3,29 +3,30 @@
 [ext_resource type="Script" uid="uid://dkgpj3hw5hwel" path="res://scripts/ui/evidence_card.gd" id="1_jvltu"]
 
 [node name="EvidenceCard" type="Panel" unique_id=333662350]
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(45, 45)
 offset_right = 45.0
 offset_bottom = 45.0
-scale = Vector2(3.6017458, 3.975545)
 script = ExtResource("1_jvltu")
 
 [node name="EvidenceImage" type="TextureRect" parent="." unique_id=712936455]
-custom_maximum_size = Vector2(40, 30)
+custom_maximum_size = Vector2(40, 40)
 layout_mode = 0
 offset_left = 2.5
 offset_top = 2.5
 offset_right = 42.5
-offset_bottom = 32.5
+offset_bottom = 42.5
 mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
 [node name="EvidenceName" type="Label" parent="." unique_id=1398566151]
 layout_mode = 0
-offset_left = 2.4987884
-offset_top = 31.693768
-offset_right = 42.498787
-offset_bottom = 43.69377
+offset_left = 3.0
+offset_top = 37.0
+offset_right = 43.0
+offset_bottom = 49.000004
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 4
 text = "EvidenceName"
 horizontal_alignment = 1

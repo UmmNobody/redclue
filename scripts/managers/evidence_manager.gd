@@ -8,7 +8,11 @@ var placed_positions: Dictionary = {}
 
 func _ready() -> void:
 	load_evidences()
-	
+
+func restart_evidence_manager() -> void :
+	unlocked_evidences.clear()
+	placed_positions.clear()
+
 func load_evidences() -> void:
 	var files = DirAccess.get_files_at(
 		"res://data/evidences/"

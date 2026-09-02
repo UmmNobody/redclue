@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dj7q4g2umdltf"]
 
 [ext_resource type="Script" uid="uid://d13d51oka4uh1" path="res://scripts/minigames/minigame_keyboard.gd" id="1_g7gk1"]
+[ext_resource type="Texture2D" uid="uid://bbbc7oyw1owl2" path="res://assets/ui/UI Clean Film.png" id="2_dp1qj"]
 
 [node name="MinigameKeyboard" type="Control" unique_id=1214500244]
 layout_mode = 3
@@ -11,6 +12,12 @@ script = ExtResource("1_g7gk1")
 start_progress = 5.0
 correct_amount = 5.0
 key_time_limit = 3.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=295557063]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_dp1qj")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=2065681988]
 layout_mode = 1

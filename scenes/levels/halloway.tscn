@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://ulqvlmoxgqqs"]
+
+[ext_resource type="Script" uid="uid://d22jh50b73e63" path="res://scenes/levels/halloway.gd" id="1_newy1"]
+[ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="2_5gwtg"]
+[ext_resource type="Texture2D" uid="uid://c250n1xxky7nh" path="res://assets/new_image/Pharmacy/Pharmacy.png" id="2_newy1"]
+[ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="3_5gwtg"]
+[ext_resource type="PackedScene" uid="uid://hrus2h6lo024" path="res://scenes/npc/petch.tscn" id="4_rmv8u"]
+[ext_resource type="Texture2D" uid="uid://x8savo5vrdks" path="res://assets/new_image/Pharmacy/Door-Parmacy.png" id="4_x7ohb"]
+[ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="7_oe8pe"]
+
+[node name="Halloway" type="Node2D" unique_id=111324769]
+script = ExtResource("1_newy1")
+
+[node name="f1" type="Sprite2D" parent="." unique_id=517407988]
+position = Vector2(385, -217)
+texture = ExtResource("2_newy1")
+
+[node name="f2" type="Sprite2D" parent="." unique_id=1883809592]
+position = Vector2(-160, -215)
+texture = ExtResource("2_newy1")
+
+[node name="f3" type="Sprite2D" parent="." unique_id=1404335211]
+position = Vector2(319, -53)
+scale = Vector2(1.4320987, 1)
+texture = ExtResource("2_newy1")
+
+[node name="f4" type="Sprite2D" parent="." unique_id=866858368]
+position = Vector2(340, -389)
+scale = Vector2(1.3580248, 1)
+texture = ExtResource("2_newy1")
+
+[node name="TeleportSpawn" type="Marker2D" parent="." unique_id=1318467273]
+position = Vector2(228, -192)
+
+[node name="walls" type="Node2D" parent="." unique_id=332109283]
+
+[node name="Wall" parent="walls" unique_id=713871130 instance=ExtResource("7_oe8pe")]
+position = Vector2(197, -210)
+
+[node name="Wall2" parent="walls" unique_id=147018619 instance=ExtResource("7_oe8pe")]
+position = Vector2(499, -210)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=1188371694]
+
+[node name="film_door" parent="Interactables" unique_id=1816552023 instance=ExtResource("3_5gwtg")]
+position = Vector2(207, -210)
+required_quest_id = ""
+
+[node name="Sprite2D" parent="Interactables/film_door" index="1" unique_id=523219159]
+texture = ExtResource("4_x7ohb")
+
+[node name="petch" parent="Interactables" unique_id=747695159 instance=ExtResource("4_rmv8u")]
+position = Vector2(328, -215)
+required_quest_id = "meet_petch"
+
+[node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("2_5gwtg")]
+
+[editable path="Interactables/film_door"]

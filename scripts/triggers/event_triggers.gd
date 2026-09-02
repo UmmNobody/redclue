@@ -2,10 +2,12 @@ class_name EventTrigger
 extends Area2D
 
 
+@export_category("Event")
+@export var event_id: String = ""
+
 @export_category("Quest Requirement")
 @export var required_quest_id: String = ""
 @export var required_completed_quest_id: String = ""
-
 
 @onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
 
@@ -20,6 +22,9 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 
 	if not can_trigger():
+		return
+
+	if not GameManager.check_and_register_event(event_id):
 		return
 
 	has_triggered = true

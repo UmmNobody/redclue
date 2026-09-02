@@ -2,13 +2,14 @@ extends Interactable
 
 func _ready() -> void:
 	if not GameManager.phone_ring_played:
-			print("play ring phone ... tudu tudu ...")
+			SfxManager.play_sfx("phone2")
 			GameManager.phone_ring_played = true
 
 func start_not_started_interaction() -> void:
 	set_start_dialogue()
 	Dialogic.start("first_phone")
 	LocationManager.unlock_location("factory")
+	LocationManager.unlock_location("office")
 
 func start_active_interaction() -> void:
 	set_start_dialogue()

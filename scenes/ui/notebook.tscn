@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://de52mv5g16w1x"]
 
 [ext_resource type="Script" uid="uid://cxwewhqu4ubaj" path="res://scripts/ui/notebook.gd" id="1_r52nq"]
-[ext_resource type="Texture2D" uid="uid://cppiqdn35w0bb" path="res://assets/ui/notebook.png" id="2_xuwk3"]
+[ext_resource type="Texture2D" uid="uid://c643ujimnm2wr" path="res://assets/ui/UI Book.png" id="2_b8kqm"]
+[ext_resource type="Texture2D" uid="uid://bme5sfmu8grbk" path="res://assets/ui/UI Book2.png" id="3_kqb6s"]
 
 [node name="Notebook" type="Control" unique_id=1031771591]
 layout_mode = 3
@@ -12,14 +13,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_r52nq")
 
-[node name="Notebook" type="Sprite2D" parent="." unique_id=416891351]
-position = Vector2(160, 90)
-texture = ExtResource("2_xuwk3")
+[node name="ColorRect" type="ColorRect" parent="." unique_id=469145397]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 0.627451)
 
 [node name="QuestPage" type="Control" parent="." unique_id=1148532462]
+visible = false
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 180.0
+
+[node name="TextureRect" type="TextureRect" parent="QuestPage" unique_id=1512578078]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_b8kqm")
 
 [node name="QuestTitle" type="Label" parent="QuestPage" unique_id=1247094738]
 layout_mode = 1
@@ -28,32 +38,41 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -49.0
-offset_top = -23.0
-offset_right = 59.0
-offset_bottom = -7.0
+offset_left = -79.0
+offset_top = -22.0
+offset_right = 51.0
+offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
 text = "QuestTitle"
 vertical_alignment = 1
+clip_text = true
 
 [node name="QuestDescription" type="RichTextLabel" parent="QuestPage" unique_id=1285480170]
 custom_maximum_size = Vector2(100, 90)
 layout_mode = 0
-offset_left = 115.0
+offset_left = 84.0
 offset_top = 85.0
-offset_right = 215.0
-offset_bottom = 175.0
-theme_override_font_sizes/normal_font_size = 6
+offset_right = 145.0
+offset_bottom = 167.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 4
 bbcode_enabled = true
+text = "test"
 scroll_active = false
 
 [node name="EvidencePage" type="Control" parent="." unique_id=2043309386]
-visible = false
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 209.0
+
+[node name="TextureRect" type="TextureRect" parent="EvidencePage" unique_id=154465899]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_kqb6s")
 
 [node name="EvidenceGrid" type="GridContainer" parent="EvidencePage" unique_id=1281605744]
 layout_mode = 1
@@ -62,13 +81,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -29.0
-offset_top = -44.5
-offset_right = 71.0
-offset_bottom = 55.5
+offset_left = -52.0
+offset_top = -33.5
+offset_right = 78.0
+offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 10
+theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 10
 columns = 2
 
@@ -79,14 +98,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -27.0
-offset_top = 56.5
-offset_right = -2.0
-offset_bottom = 71.5
+offset_left = -67.0
+offset_top = 55.5
+offset_right = -42.0
+offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
 text = "Previous"
+flat = true
 
 [node name="NextButton" type="Button" parent="EvidencePage" unique_id=650639645]
 layout_mode = 1
@@ -95,15 +116,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 53.0
-offset_top = 56.5
-offset_right = 78.0
-offset_bottom = 71.5
+offset_left = 68.0
+offset_top = 55.5
+offset_right = 93.0
+offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 6
 text = "Next
 "
+flat = true
 
 [node name="PageLabel" type="Label" parent="EvidencePage" unique_id=1081186492]
 layout_mode = 1
@@ -112,12 +135,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = 58.5
-offset_right = 44.0
-offset_bottom = 69.5
+offset_left = -24.0
+offset_top = 59.5
+offset_right = 12.0
+offset_bottom = 70.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 4
 text = "PageLabel"
 horizontal_alignment = 1
@@ -141,22 +165,20 @@ text = "Close"
 
 [node name="QuestTab" type="Button" parent="." unique_id=1223330550]
 layout_mode = 0
-offset_left = 105.0
-offset_top = 29.0
-offset_right = 133.0
-offset_bottom = 46.0
+offset_left = 75.0
+offset_top = 47.0
+offset_right = 96.0
+offset_bottom = 64.0
 theme_override_font_sizes/font_size = 6
-text = "Quest"
 flat = true
 
 [node name="EvidenceTab" type="Button" parent="." unique_id=602224123]
 layout_mode = 0
-offset_left = 137.0
-offset_top = 28.0
-offset_right = 171.0
-offset_bottom = 45.0
+offset_left = 103.0
+offset_top = 48.0
+offset_right = 122.0
+offset_bottom = 65.0
 theme_override_font_sizes/font_size = 6
-text = "Evidence"
 flat = true
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

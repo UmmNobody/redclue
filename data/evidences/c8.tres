@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Evidence" format=3 uid="uid://cwsey5msk148l"]
 
-[ext_resource type="Texture2D" uid="uid://hc1bkxv8ubkd" path="res://assets/evidences_png/c_8.png" id="1_8wyse"]
+[ext_resource type="Texture2D" uid="uid://c3gy715q6vqpb" path="res://assets/evidences_png/C-008.png" id="1_8wyse"]
 [ext_resource type="Script" uid="uid://cje680fcrh0bk" path="res://scripts/evidence/evidence.gd" id="2_q8c8g"]
 
 [resource]
 script = ExtResource("2_q8c8g")
 evidence_id = "C8"
-evidence_name = "หลักฐานชิ้นที่ 8"
+evidence_name = "Ingrid ส่งเอกสารให้ Victor"
 description = "หลักฐานชิ้นที่ 8 ..."
 image = ExtResource("1_8wyse")
 metadata/_custom_type_script = "uid://cje680fcrh0bk"

@@ -1,7 +1,7 @@
 extends EventTrigger
 
 func trigger_event() -> void:
-	print("Dudududu... Dudududu")
+	SfxManager.play_sfx("phone1")
 	set_start_dialogue()
 	await get_tree().create_timer(2.0).timeout
 	Dialogic.start("holm2")

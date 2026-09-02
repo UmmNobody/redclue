@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Quest" format=3 uid="uid://c116arx5axdyf"]
+
+[ext_resource type="Script" uid="uid://cgbcyk88k4dc1" path="res://scripts/quest/quest_objective.gd" id="1_t4qrk"]
+[ext_resource type="Script" uid="uid://c0bcaql6ncyl8" path="res://scripts/quest/quest.gd" id="2_oba3d"]
+
+[sub_resource type="Resource" id="Resource_ud3vt"]
+script = ExtResource("1_t4qrk")
+objective_id = "meet_petch1"
+description = "สอบถาม Petch เกี่ยวกับพืชมีพิษ"
+metadata/_custom_type_script = "uid://cgbcyk88k4dc1"
+
+[resource]
+script = ExtResource("2_oba3d")
+quest_id = "meet_petch"
+quest_name = "ไปหา Petch ที่ Halloway Apothecary"
+description = "เดินทางไป Halloway Apothecary เพื่อสอบถาม Petch เกี่ยวกับการซื้อขายพืชมีพิษ Monkshood"
+objectives = Array[ExtResource("1_t4qrk")]([SubResource("Resource_ud3vt")])
+quest_order = 14
+metadata/_custom_type_script = "uid://c0bcaql6ncyl8"

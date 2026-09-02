@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://nhpgefr4dti1"]
 
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_0ug24"]
-[ext_resource type="Texture2D" uid="uid://y8n0pjrwv4ht" path="res://assets/maps/fac_f1.png" id="2_0kexd"]
+[ext_resource type="Script" uid="uid://b0nvujnt6wbqr" path="res://scenes/levels/factory.gd" id="1_vpo40"]
+[ext_resource type="Texture2D" uid="uid://c2hmichxutfbu" path="res://assets/new_image/Factory-back/fac_side.png" id="2_vpo40"]
 [ext_resource type="PackedScene" uid="uid://eofohd3noako" path="res://scenes/interacables/motorcycle.tscn" id="3_iuutr"]
+[ext_resource type="Texture2D" uid="uid://x3go3nnqvtbs" path="res://assets/new_image/Factory-F2-2/fac_f2-2.png" id="3_menmw"]
+[ext_resource type="Texture2D" uid="uid://blgvu83yfds2a" path="res://assets/new_image/Factory-F2-1/fac_f2-1.png" id="4_menmw"]
 [ext_resource type="PackedScene" uid="uid://cxmk51t4dmurf" path="res://scenes/npc/enmund.tscn" id="4_vqp87"]
 [ext_resource type="PackedScene" uid="uid://ci7xtdbv00cis" path="res://scenes/triggers/enmund_trigger1.tscn" id="5_ffdlx"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="5_ramhb"]
-[ext_resource type="Texture2D" uid="uid://d4m7wh6bjv1fl" path="res://assets/interactable_png/factory_interact_png/stair_1_to_2.png" id="6_066ne"]
-[ext_resource type="Texture2D" uid="uid://dopxqhpc3nita" path="res://assets/interactable_png/factory_interact_png/door_f22_to_f21.png" id="8_5vyh3"]
-[ext_resource type="Texture2D" uid="uid://dp6mlq7ufxcge" path="res://assets/maps/fac_f2-1.png" id="8_066ne"]
-[ext_resource type="Texture2D" uid="uid://8fon502h2a4c" path="res://assets/interactable_png/factory_interact_png/stair_2_to_1.png" id="8_xelw7"]
-[ext_resource type="Texture2D" uid="uid://cee3d26wy25pv" path="res://assets/interactable_png/factory_interact_png/door_f21_to_f22.png" id="9_2fbrs"]
-[ext_resource type="Texture2D" uid="uid://28j88q5e53n5" path="res://assets/interactable_png/factory_interact_png/side_door.png" id="9_bpebr"]
-[ext_resource type="Texture2D" uid="uid://8aet4trdi84p" path="res://assets/maps/fac_f2-2.png" id="9_x2vjn"]
+[ext_resource type="Texture2D" uid="uid://d335vlpoj18e1" path="res://assets/new_image/Factory-F1/fac_f1_insite.png" id="5_vpo40"]
+[ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="6_vpo40"]
+[ext_resource type="Texture2D" uid="uid://xckuun85y23t" path="res://assets/new_image/Factory-F1/Stair.png" id="7_vpo40"]
+[ext_resource type="Texture2D" uid="uid://lmepl70sqr7c" path="res://assets/new_image/Factory-F2-1/f2-Door.png" id="8_menmw"]
+[ext_resource type="Texture2D" uid="uid://cq6bbsigs5kwg" path="res://assets/new_image/Factory-F2-2/f2-2-Door.png" id="9_vpo40"]
 [ext_resource type="PackedScene" uid="uid://bapafw2tt3w2b" path="res://scenes/interacables/deadbody.tscn" id="10_r0g5m"]
+[ext_resource type="Texture2D" uid="uid://e0sxtiygd0iv" path="res://assets/new_image/Factory-back/Factory-Back.png" id="11_n1sjn"]
 [ext_resource type="PackedScene" uid="uid://b8fsvby1643ll" path="res://scenes/interacables/cup_pot.tscn" id="11_rbf27"]
 [ext_resource type="PackedScene" uid="uid://0fhul507ensg" path="res://scenes/interacables/file.tscn" id="12_bfwgj"]
 [ext_resource type="PackedScene" uid="uid://ygrbp7am7ynk" path="res://scenes/triggers/enmund_trigger2.tscn" id="12_w0abr"]
@@ -21,36 +23,64 @@
 [ext_resource type="PackedScene" uid="uid://dsuk8n70u536v" path="res://scenes/triggers/holm_trigger_1.tscn" id="15_jy0sh"]
 [ext_resource type="PackedScene" uid="uid://bjsrc3rwkrk4e" path="res://scenes/npc/garret.tscn" id="15_qlbif"]
 [ext_resource type="PackedScene" uid="uid://c4frxttmw8kl1" path="res://scenes/interacables/cigarette_stub.tscn" id="18_47ka1"]
-[ext_resource type="Texture2D" uid="uid://58sktnae4r4c" path="res://assets/maps/fac_side.png" id="20_gmod2"]
 [ext_resource type="PackedScene" uid="uid://b8vf2hvumbmq2" path="res://scenes/triggers/after_c_6_trigger.tscn" id="22_menmw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ramhb"]
 
 [node name="FactoryLevel" type="Node2D" unique_id=1859534269]
+script = ExtResource("1_vpo40")
 
-[node name="FacSide" type="Sprite2D" parent="." unique_id=1921530876]
+[node name="Map" type="Node2D" parent="." unique_id=1438546685]
+
+[node name="FacSide" type="Sprite2D" parent="Map" unique_id=1921530876]
 position = Vector2(1078, 170)
-texture = ExtResource("20_gmod2")
+texture = ExtResource("2_vpo40")
 
-[node name="FacF22" type="Sprite2D" parent="." unique_id=103319385]
+[node name="FacF22" type="Sprite2D" parent="Map" unique_id=103319385]
 position = Vector2(2952, -234)
-texture = ExtResource("9_x2vjn")
+texture = ExtResource("3_menmw")
 
-[node name="FacF21" type="Sprite2D" parent="." unique_id=268476995]
-position = Vector2(2230, -234)
-texture = ExtResource("8_066ne")
+[node name="FacF21" type="Sprite2D" parent="Map" unique_id=268476995]
+position = Vector2(1820, -235)
+texture = ExtResource("4_menmw")
 
-[node name="FacF1" type="Sprite2D" parent="." unique_id=1267190507]
-position = Vector2(874, -237)
-texture = ExtResource("2_0kexd")
+[node name="FacF1" type="Sprite2D" parent="Map" unique_id=1267190507]
+position = Vector2(725, -237)
+texture = ExtResource("5_vpo40")
+
+[node name="Walls" type="Node2D" parent="." unique_id=776243148]
+
+[node name="Wall" parent="Walls" unique_id=713871130 instance=ExtResource("6_vpo40")]
+position = Vector2(413, -211)
+
+[node name="Wall2" parent="Walls" unique_id=1698386312 instance=ExtResource("6_vpo40")]
+position = Vector2(981, -214)
+
+[node name="Wall3" parent="Walls" unique_id=1152627098 instance=ExtResource("6_vpo40")]
+position = Vector2(1655, -217)
+
+[node name="Wall4" parent="Walls" unique_id=1148219291 instance=ExtResource("6_vpo40")]
+position = Vector2(1980, -214)
+
+[node name="Wall5" parent="Walls" unique_id=659452952 instance=ExtResource("6_vpo40")]
+position = Vector2(792, 203)
+
+[node name="Wall6" parent="Walls" unique_id=703788036 instance=ExtResource("6_vpo40")]
+position = Vector2(1373, 203)
+
+[node name="Wall7" parent="Walls" unique_id=436721840 instance=ExtResource("6_vpo40")]
+position = Vector2(2695, -199)
+
+[node name="Wall8" parent="Walls" unique_id=158952873 instance=ExtResource("6_vpo40")]
+position = Vector2(3121, -197)
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=1453308529]
-position = Vector2(320, -211)
+position = Vector2(498, -197)
 
 [node name="Doors" type="Node2D" parent="." unique_id=974840772]
 
 [node name="door_move" parent="Doors" unique_id=9563876 instance=ExtResource("5_ramhb")]
-position = Vector2(855, -209)
+position = Vector2(630, -201)
 required_quest_id = "meet_enmund"
 short_message = "ไปหา Enmund ก่อนดีกว่า ...ๆ"
 
@@ -60,39 +90,39 @@ scale = Vector2(3.9871552, 4.4399934)
 shape = SubResource("RectangleShape2D_ramhb")
 
 [node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
-position = Vector2(0, -37)
-texture = ExtResource("6_066ne")
+position = Vector2(0, -47)
+texture = ExtResource("7_vpo40")
 
 [node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
-position = Vector2(1275, -1)
+position = Vector2(1173, -1)
 
 [node name="door_move2" parent="Doors" unique_id=779823522 instance=ExtResource("5_ramhb")]
-position = Vector2(2154, -210)
+position = Vector2(1858, -202)
 
 [node name="CollisionShape2D" parent="Doors/door_move2" index="0" unique_id=783111100]
 scale = Vector2(-0.6381062, 0.8233155)
 
 [node name="Sprite2D" parent="Doors/door_move2" index="1" unique_id=523219159]
-position = Vector2(0, -24)
-texture = ExtResource("8_xelw7")
+position = Vector2(0, -52)
+texture = ExtResource("7_vpo40")
 
 [node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
-position = Vector2(-1299, -1)
+position = Vector2(-1201, 5)
 
 [node name="door_move3" parent="Doors" unique_id=1811503285 instance=ExtResource("5_ramhb")]
-position = Vector2(2307, -217)
+position = Vector2(1971, -214)
 
 [node name="CollisionShape2D" parent="Doors/door_move3" index="0" unique_id=783111100]
 scale = Vector2(-0.6381062, 1.9033155)
 
 [node name="Sprite2D" parent="Doors/door_move3" index="1" unique_id=523219159]
-texture = ExtResource("9_2fbrs")
+texture = ExtResource("8_menmw")
 
 [node name="TeleportMarker" parent="Doors/door_move3" index="2" unique_id=242310348]
-position = Vector2(493, 10)
+position = Vector2(760, 22)
 
 [node name="door_move4" parent="Doors" unique_id=1359042269 instance=ExtResource("5_ramhb")]
-position = Vector2(2787, -216)
+position = Vector2(2705, -197)
 required_quest_id = "ask_garret"
 short_message = "จัดการห้องนี้ให้เสร็จก่อนดีกว่า..."
 
@@ -100,13 +130,13 @@ short_message = "จัดการห้องนี้ให้เสร็จ
 scale = Vector2(-0.6381062, 1.9033155)
 
 [node name="Sprite2D" parent="Doors/door_move4" index="1" unique_id=523219159]
-texture = ExtResource("8_5vyh3")
+texture = ExtResource("9_vpo40")
 
 [node name="TeleportMarker" parent="Doors/door_move4" index="2" unique_id=242310348]
-position = Vector2(-500, 6)
+position = Vector2(-755, -5)
 
 [node name="door_move5" parent="Doors" unique_id=1816552023 instance=ExtResource("5_ramhb")]
-position = Vector2(1345, -224)
+position = Vector2(926, -209)
 required_quest_id = "check_side_factory"
 short_message = "ประตูไปบริเวณด้านข้างของโรงงาน"
 
@@ -114,44 +144,44 @@ short_message = "ประตูไปบริเวณด้านข้าง
 scale = Vector2(-0.6381062, 1.9033155)
 
 [node name="Sprite2D" parent="Doors/door_move5" index="1" unique_id=523219159]
-texture = ExtResource("9_bpebr")
+texture = ExtResource("11_n1sjn")
 
 [node name="TeleportMarker" parent="Doors/door_move5" index="2" unique_id=242310348]
-position = Vector2(-388, 415)
+position = Vector2(-42, 418)
 
 [node name="door_move6" parent="Doors" unique_id=662266889 instance=ExtResource("5_ramhb")]
-position = Vector2(957, 183)
+position = Vector2(884, 203)
 
 [node name="CollisionShape2D" parent="Doors/door_move6" index="0" unique_id=783111100]
 scale = Vector2(-0.6381062, 1.9033155)
 
 [node name="Sprite2D" parent="Doors/door_move6" index="1" unique_id=523219159]
-texture = ExtResource("9_bpebr")
+texture = ExtResource("11_n1sjn")
 
 [node name="TeleportMarker" parent="Doors/door_move6" index="2" unique_id=242310348]
-position = Vector2(388, -394)
+position = Vector2(42, -400)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=1006535289]
 
 [node name="motorcycle" parent="Interactables" unique_id=214013248 instance=ExtResource("3_iuutr")]
-position = Vector2(291, -212)
+position = Vector2(463, -192)
 required_quest_id = "meet_evelyn"
 
 [node name="enmund" parent="Interactables" unique_id=83249319 instance=ExtResource("4_vqp87")]
-position = Vector2(762, -215)
+position = Vector2(600, -201)
 
 [node name="QuestPosition_01" parent="Interactables/enmund/NPCPositionController" parent_id_path=PackedInt32Array(83249319, 418644336) index="0" unique_id=1806476944 node_paths=PackedStringArray("position_marker")]
 quest_id = "meet_enmund"
 position_marker = NodePath("../../../../NPCPositions/enmundFirst")
 
 [node name="deadbody" parent="Interactables" unique_id=1333905808 instance=ExtResource("10_r0g5m")]
-position = Vector2(2974, -201)
+position = Vector2(2965, -172)
 
 [node name="cup_pot" parent="Interactables" unique_id=366511046 instance=ExtResource("11_rbf27")]
-position = Vector2(3092, -225)
+position = Vector2(2989, -199)
 
 [node name="file" parent="Interactables" unique_id=818090265 instance=ExtResource("12_bfwgj")]
-position = Vector2(2822, -222)
+position = Vector2(2854, -194)
 required_quest_id = "explore_room1"
 
 [node name="holm" parent="Interactables" unique_id=1496706880 instance=ExtResource("13_n8j3m")]
@@ -161,34 +191,39 @@ quest_id = "explore_room1"
 position_marker = NodePath("../../../../NPCPositions/holmFirst")
 
 [node name="garret" parent="Interactables" unique_id=510421296 instance=ExtResource("15_qlbif")]
-position = Vector2(1078, -213)
+position = Vector2(788, -189)
 required_quest_id = "ask_garret"
 
 [node name="cigarette_stub" parent="Interactables" unique_id=2058115659 instance=ExtResource("18_47ka1")]
-position = Vector2(1273, 203)
+position = Vector2(1016, 235)
+required_quest_id = "check_side_factory"
 
 [node name="Eventtriggers" type="Node2D" parent="." unique_id=358300509]
 
 [node name="meet_enmund_trigger" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("5_ffdlx")]
-position = Vector2(725, -224)
+position = Vector2(549, -199)
+event_id = "meet_enmund_trigger"
 
 [node name="enmund_2_trigger" parent="Eventtriggers" unique_id=358671893 instance=ExtResource("12_w0abr")]
-position = Vector2(2905, -214)
+position = Vector2(2785, -185)
+event_id = "enmund_2_trigger"
 
 [node name="holm_trigger1" parent="Eventtriggers" unique_id=966666911 instance=ExtResource("15_jy0sh")]
-position = Vector2(2243, -213)
+position = Vector2(1765, -206)
+event_id = "holm_trigger1"
 
 [node name="after_c6_trigger" parent="Eventtriggers" unique_id=756389352 instance=ExtResource("22_menmw")]
-position = Vector2(1159, 191)
+position = Vector2(935, 213)
+event_id = "after_c6_trigger"
 required_completed_quest_id = "check_side_factory"
 
 [node name="NPCPositions" type="Node2D" parent="." unique_id=230267361]
 
 [node name="enmundFirst" type="Marker2D" parent="NPCPositions" unique_id=389629004]
-position = Vector2(2936, -210)
+position = Vector2(2830, -189)
 
 [node name="holmFirst" type="Marker2D" parent="NPCPositions" unique_id=404900463]
-position = Vector2(2206, -210)
+position = Vector2(1711, -202)
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_0ug24")]
 

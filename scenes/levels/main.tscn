@@ -1,6 +1,80 @@
-[gd_scene format=3 uid="uid://c8051jbdx23f4"]
+[gd_scene format=3 uid="uid://cicrsfdlt36s1"]
 
 [ext_resource type="Script" uid="uid://c8480h5ycpt58" path="res://scenes/levels/main.gd" id="1_72ix8"]
+[ext_resource type="Texture2D" uid="uid://bh4l2onr5yf4t" path="res://assets/ui/UI_Map/hand-removebg-preview.png" id="2_2vj2h"]
 
-[node name="main" type="Node2D" unique_id=815914131]
+[node name="Main" type="Control" unique_id=1384437736]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 180.0
 script = ExtResource("1_72ix8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=263225607]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1327395806]
+modulate = Color(1, 1, 1, 0.4392157)
+layout_mode = 0
+offset_left = 215.00002
+offset_top = 12.0
+offset_right = 563.0
+offset_bottom = 654.0
+rotation = -0.2617994
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_2vj2h")
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect" unique_id=917515975]
+modulate = Color(1, 1, 1, 0.4392157)
+layout_mode = 0
+offset_left = 12.999996
+offset_top = 40.00001
+offset_right = 361.0
+offset_bottom = 682.0
+rotation = 0.2617994
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_2vj2h")
+flip_h = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1539163857]
+custom_maximum_size = Vector2(320, 180)
+layout_mode = 0
+offset_right = 364.0
+offset_bottom = 197.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=163095919]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=886904527]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0.10980392, 1)
+text = "RedClue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2129459697]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Start"
+
+[node name="OptionButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1553751649]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Option"
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=893345277]
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

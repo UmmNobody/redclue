@@ -1,46 +1,74 @@
 [gd_scene format=3 uid="uid://42rbxq73sos"]
 
-[ext_resource type="Texture2D" uid="uid://cgcb2mb133ayx" path="res://assets/maps/office.png" id="1_uw80i"]
+[ext_resource type="Texture2D" uid="uid://dudqwtiys5s3e" path="res://assets/new_image/Office/office.png" id="1_4m8q4"]
 [ext_resource type="PackedScene" uid="uid://1s54wau3vd4k" path="res://scenes/interacables/sofa.tscn" id="2_ey3sf"]
+[ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="2_tuhfx"]
 [ext_resource type="PackedScene" uid="uid://bqey8mvoprmqf" path="res://scenes/interacables/telephone.tscn" id="3_1gkrr"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_4m8q4"]
 [ext_resource type="PackedScene" uid="uid://bsa48kxbnmgyn" path="res://scenes/interacables/evidence_board.tscn" id="5_ey3sf"]
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="5_tuhfx"]
 [ext_resource type="PackedScene" uid="uid://dspvadm6mtcl6" path="res://scenes/triggers/afterboard_trigger.tscn" id="6_1gkrr"]
+[ext_resource type="PackedScene" uid="uid://dk15unyufudu6" path="res://scenes/npc/harder.tscn" id="6_4m8q4"]
 
 [node name="Office" type="Node2D" unique_id=1580521500]
 
 [node name="Office" type="Sprite2D" parent="." unique_id=2137355171]
 position = Vector2(299, -114)
-texture = ExtResource("1_uw80i")
+texture = ExtResource("1_4m8q4")
+
+[node name="Office2" type="Sprite2D" parent="." unique_id=84075019]
+position = Vector2(-386, -112)
+texture = ExtResource("1_4m8q4")
+
+[node name="Office3" type="Sprite2D" parent="." unique_id=772663109]
+position = Vector2(972, -112)
+texture = ExtResource("1_4m8q4")
+
+[node name="walls" type="Node2D" parent="." unique_id=1004940138]
+
+[node name="Wall" parent="walls" unique_id=713871130 instance=ExtResource("2_tuhfx")]
+position = Vector2(51, -120)
+
+[node name="Wall2" parent="walls" unique_id=443097266 instance=ExtResource("2_tuhfx")]
+position = Vector2(563, -120)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=1039905659]
 
 [node name="Sofa" parent="Interactables" unique_id=1816552023 instance=ExtResource("2_ey3sf")]
-position = Vector2(260, -95)
+position = Vector2(249, -95)
 
 [node name="telephone" parent="Interactables" unique_id=1246797705 instance=ExtResource("3_1gkrr")]
-position = Vector2(356, -105)
+position = Vector2(307, -104)
 
 [node name="office_door" parent="Interactables" unique_id=1876554291 instance=ExtResource("4_4m8q4")]
-position = Vector2(511, -99)
+position = Vector2(499, -112)
 short_message = "เสียงโทรศัพท์ยังดังไม่หยุด ... ไปรับโทรศัพท์ก่อนดีกว่า"
 
 [node name="evidence_board" parent="Interactables" unique_id=1190979840 instance=ExtResource("5_ey3sf")]
-position = Vector2(129, -110)
+position = Vector2(142, -108)
 required_quest_id = "back_to_office"
+
+[node name="harder" parent="Interactables" unique_id=168835879 node_paths=PackedStringArray("npc_position") instance=ExtResource("6_4m8q4")]
+npc_position = NodePath("../../NPCPositions/harder")
+required_quest_id = "meet_harder"
 
 [node name="Eventtriggers" type="Node2D" parent="." unique_id=1818877462]
 
 [node name="afterboard_trigger" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("6_1gkrr")]
-position = Vector2(216, -102)
+position = Vector2(205, -102)
+event_id = "afterboard_trigger"
 required_completed_quest_id = "back_to_office"
+
+[node name="NPCPositions" type="Node2D" parent="." unique_id=1989703506]
+
+[node name="harder" type="Marker2D" parent="NPCPositions" unique_id=1652382233]
+position = Vector2(424, -99)
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("5_tuhfx")]
 position = Vector2(0, -180)
 
 [node name="InitialPlayerSpawn" type="Marker2D" parent="." unique_id=1664520335]
-position = Vector2(160, -90)
+position = Vector2(103, -95)
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=101725155]
-position = Vector2(490, -90)
+position = Vector2(499, -99)

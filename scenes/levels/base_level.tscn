@@ -6,6 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://byjcewwe20r31" path="res://scenes/ui/TeleportUI.tscn" id="3_ukglk"]
 [ext_resource type="PackedScene" uid="uid://dj7q4g2umdltf" path="res://scenes/minigames/MinigameKeyboard.tscn" id="5_o1chu"]
 [ext_resource type="PackedScene" uid="uid://niql73s8sgai" path="res://scenes/ui/EvidenceBoard.tscn" id="6_3rriw"]
+[ext_resource type="PackedScene" uid="uid://dlyy1nwkb3wrf" path="res://scenes/minigames/MiniGameConrad.tscn" id="7_h4ce7"]
+[ext_resource type="PackedScene" uid="uid://bd3ncbu568qxl" path="res://scenes/cutscenes/game_win_cutscene.tscn" id="8_53c65"]
+[ext_resource type="PackedScene" uid="uid://b4rs1jsbem5tu" path="res://scenes/cutscenes/game_over_cutscene.tscn" id="9_43bxi"]
+[ext_resource type="Texture2D" uid="uid://baobx1kwynqbr" path="res://assets/ui/UI Book close.png" id="10_j7gcg"]
 
 [node name="BaseLevel" type="Node2D" unique_id=1392396242]
 script = ExtResource("1_wwrw0")
@@ -18,12 +22,38 @@ offset = Vector2(0, -20)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=551747105]
 
+[node name="topNotebook" type="TextureRect" parent="CanvasLayer" unique_id=2127920104]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("10_j7gcg")
+
 [node name="Notebook" parent="CanvasLayer" unique_id=1031771591 instance=ExtResource("2_ukglk")]
+visible = false
 
 [node name="TeleportUi" parent="CanvasLayer" unique_id=671122715 instance=ExtResource("3_ukglk")]
+visible = false
 
 [node name="MinigameKeyboard" parent="CanvasLayer" unique_id=1214500244 groups=["MinigameKeyboard"] instance=ExtResource("5_o1chu")]
 visible = false
 
 [node name="EvidenceBoard" parent="CanvasLayer" unique_id=1314747732 groups=["EvidenceBoard"] instance=ExtResource("6_3rriw")]
 visible = false
+
+[node name="MiniGameConrad" parent="CanvasLayer" unique_id=1760668812 instance=ExtResource("7_h4ce7")]
+visible = false
+
+[node name="GameWinCutscene" parent="CanvasLayer" unique_id=1144075555 instance=ExtResource("8_53c65")]
+visible = false
+
+[node name="GameOverCutscene" parent="CanvasLayer" unique_id=1316985411 instance=ExtResource("9_43bxi")]
+visible = false
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=543189042]
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 34.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 6
+text = "Exit"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

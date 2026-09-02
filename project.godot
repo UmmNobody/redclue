@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="RedClue"
-run/main_scene="uid://c8051jbdx23f4"
+run/main_scene="uid://cicrsfdlt36s1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[audio]
+
+buses/default_bus_layout="uid://cc1b5oreuolqo"
 
 [autoload]
 
@@ -24,29 +28,45 @@ StoryManager="*uid://66fopqyyph8e"
 GameManager="*uid://bi4t7yko6bw62"
 LocationManager="*uid://b1mxlagjj2cuq"
 Dialogic="*uid://ds2q0uclmolvu"
+MusicManager="*uid://bq5uj7nx5mut1"
+SfxManager="*uid://p7qu4b4w1j0q"
 
 [dialogic]
 
 directories/dch_directory={
+"C9": "res://character/C9.dch",
 "c1": "res://character/c1.dch",
+"c10": "res://character/c10.dch",
+"c11": "res://character/c11.dch",
+"c12": "res://character/c12.dch",
 "c2": "res://character/c2.dch",
 "c3": "res://character/c3.dch",
 "c4": "res://character/c4.dch",
+"c5": "res://character/c5.dch",
 "c6": "res://character/c6.dch",
 "c64": "res://character/c64.dch",
 "c7": "res://character/c7.dch",
+"c8": "res://character/c8.dch",
+"conrad": "res://character/conrad.dch",
 "david": "res://character/david.dch",
 "elias": "res://character/elias.dch",
 "enmund": "res://character/enmund.dch",
 "evelyn": "res://character/evelyn.dch",
 "garret": "res://character/garret.dch",
+"harder": "res://character/harder.dch",
 "holm": "res://character/holm.dch",
-"ingrid": "res://character/ingrid.dch"
+"ingrid": "res://character/ingrid.dch",
+"petch": "res://character/petch.dch",
+"receptionist": "res://character/receptionist.dch"
 }
 directories/dtl_directory={
 "after_c6": "res://timeline/after_c6.dtl",
 "check_body": "res://timeline/check_body.dtl",
 "cigarette_stub": "res://timeline/cigarette_stub.dtl",
+"conrad1": "res://timeline/conrad1.dtl",
+"conrad2": "res://timeline/conrad2.dtl",
+"conrad3": "res://timeline/conrad3.dtl",
+"conrad_countdown": "res://timeline/conrad_countdown.dtl",
 "cup_pot": "res://timeline/cup_pot.dtl",
 "elias1": "res://timeline/elias1.dtl",
 "enmund2": "res://timeline/enmund2.dtl",
@@ -54,15 +74,25 @@ directories/dtl_directory={
 "evelyn2": "res://timeline/evelyn2.dtl",
 "fail_minigame": "res://timeline/fail_minigame.dtl",
 "file": "res://timeline/file.dtl",
+"final": "res://timeline/final.dtl",
+"find_criminal": "res://timeline/find_criminal.dtl",
 "first_phone": "res://timeline/first_phone.dtl",
+"game_over_cutscene": "res://timeline/game_over_cutscene.dtl",
+"game_win": "res://timeline/game_win.dtl",
+"game_win_cutscene": "res://timeline/game_win_cutscene.dtl",
 "garret": "res://timeline/garret.dtl",
+"harder1": "res://timeline/harder1.dtl",
 "holm1": "res://timeline/holm1.dtl",
 "holm2": "res://timeline/holm2.dtl",
 "holm3": "res://timeline/holm3.dtl",
+"holm4": "res://timeline/holm4.dtl",
 "ingrid1": "res://timeline/ingrid1.dtl",
 "knockdoor": "res://timeline/knockdoor.dtl",
 "meet_enmund": "res://timeline/meet_enmund.dtl",
+"petch1": "res://timeline/petch1.dtl",
+"reception": "res://timeline/reception.dtl",
 "short_message": "res://timeline/short_message.dtl",
+"start_cutscene": "res://timeline/start_cutscene.dtl",
 "start_minigame": "res://timeline/start_minigame.dtl",
 "sucess_minigame": "res://timeline/sucess_minigame.dtl"
 }
@@ -112,6 +142,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+audio/type_sound_bus="SFX"
 
 [display]
 
@@ -133,6 +164,9 @@ Player=""
 TeleportUI=""
 MinigameKeyboard=""
 EvidenceBoard=""
+MinigameConrad=""
+GameWinCutscene=""
+GameOverCutscene=""
 
 [input]
 

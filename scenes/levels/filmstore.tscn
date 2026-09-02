@@ -1,74 +1,102 @@
 [gd_scene format=3 uid="uid://c52xt1k2ivbsc"]
 
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_qwbcs"]
-[ext_resource type="Texture2D" uid="uid://b360qnkgl4cwk" path="res://assets/maps/Flim_in.png" id="2_x4pym"]
-[ext_resource type="Texture2D" uid="uid://ba6fafbxolcur" path="res://assets/maps/film_inside_room.png" id="3_6rs14"]
+[ext_resource type="Script" uid="uid://co50nchaieb07" path="res://scenes/levels/filmstore.gd" id="1_xv3uq"]
+[ext_resource type="Texture2D" uid="uid://domkh5xni5ifs" path="res://assets/new_image/Film-in/Flim_in.png" id="2_xv3uq"]
+[ext_resource type="Texture2D" uid="uid://d3txspaqgr6y6" path="res://assets/new_image/Film-insite-Room/film_inside_room.png" id="3_miewr"]
+[ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="4_4rp6g"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="4_ng1f6"]
-[ext_resource type="Texture2D" uid="uid://dhtjg0pn48puq" path="res://assets/interactable_png/flim_interact_png/flim_door.png" id="5_oqj0i"]
+[ext_resource type="Texture2D" uid="uid://j3x6bx07kgij" path="res://assets/new_image/Film-in/Door2-Flim-in.png" id="5_4rp6g"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="6_oqj0i"]
 [ext_resource type="PackedScene" uid="uid://dapra0q72mylw" path="res://scenes/triggers/evelyn_trigger_1.tscn" id="7_2fllf"]
 [ext_resource type="PackedScene" uid="uid://gdg0tkxmv81k" path="res://scenes/npc/evelyn.tscn" id="7_7m8a1"]
 [ext_resource type="PackedScene" uid="uid://cuyws7nowmvb8" path="res://scenes/interacables/film_developer.tscn" id="7_fdok2"]
+[ext_resource type="Texture2D" uid="uid://dlvgsukr2n21k" path="res://assets/new_image/Film-in/Door-Flim-in.png" id="7_miewr"]
 [ext_resource type="PackedScene" uid="uid://bq85bsm1t36oi" path="res://scenes/triggers/evelyn_trigger_2.tscn" id="9_0pwf0"]
 
 [node name="Filmstore" type="Node2D" unique_id=1143346515]
+script = ExtResource("1_xv3uq")
 
 [node name="film1" type="Sprite2D" parent="." unique_id=912181080]
 position = Vector2(478, -211)
-texture = ExtResource("2_x4pym")
+texture = ExtResource("2_xv3uq")
 
 [node name="film2" type="Sprite2D" parent="." unique_id=1274085631]
-position = Vector2(-170, -211)
-texture = ExtResource("3_6rs14")
+position = Vector2(1096, -206)
+texture = ExtResource("3_miewr")
+
+[node name="film3" type="Sprite2D" parent="." unique_id=623925097]
+position = Vector2(1128.5001, 47)
+scale = Vector2(1.1203706, 1)
+texture = ExtResource("3_miewr")
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=326329114]
-position = Vector2(568, -187)
+position = Vector2(302, -188)
+
+[node name="walls" type="Node2D" parent="." unique_id=1757300038]
+
+[node name="Wall" parent="walls" unique_id=713871130 instance=ExtResource("4_4rp6g")]
+position = Vector2(278, -206)
+
+[node name="Wall2" parent="walls" unique_id=1264645597 instance=ExtResource("4_4rp6g")]
+position = Vector2(578, -206)
+
+[node name="Wall3" parent="walls" unique_id=895570268 instance=ExtResource("4_4rp6g")]
+position = Vector2(967, -206)
+
+[node name="Wall4" parent="walls" unique_id=709680790 instance=ExtResource("4_4rp6g")]
+position = Vector2(1223, -206)
 
 [node name="Doors" type="Node2D" parent="." unique_id=468868728]
 
 [node name="door_move" parent="Doors" unique_id=1816552023 instance=ExtResource("4_ng1f6")]
-position = Vector2(342, -198)
+position = Vector2(1015, -197)
 
 [node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
-texture = ExtResource("5_oqj0i")
+texture = ExtResource("5_4rp6g")
 
 [node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
-position = Vector2(-457, 11)
+position = Vector2(-483, 9)
 
 [node name="door_move2" parent="Doors" unique_id=1888338392 instance=ExtResource("4_ng1f6")]
-position = Vector2(-115, -198)
+position = Vector2(529, -204)
 
 [node name="Sprite2D" parent="Doors/door_move2" index="1" unique_id=523219159]
-texture = ExtResource("5_oqj0i")
+texture = ExtResource("5_4rp6g")
 
 [node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
-position = Vector2(457, 11)
+position = Vector2(486, 16)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=627597444]
 
 [node name="film_door" parent="Interactables" unique_id=2002177029 instance=ExtResource("6_oqj0i")]
-position = Vector2(585, -194)
+position = Vector2(288, -212)
 required_quest_id = ""
 
+[node name="Sprite2D" parent="Interactables/film_door" index="1" unique_id=523219159]
+texture = ExtResource("7_miewr")
+
 [node name="evelyn" parent="Interactables" unique_id=821057523 instance=ExtResource("7_7m8a1")]
-position = Vector2(445, -206)
+position = Vector2(393, -206)
 required_quest_id = "develop_film"
 
 [node name="film_developer" parent="Interactables" unique_id=1507818790 instance=ExtResource("7_fdok2")]
-position = Vector2(-228, -184)
+position = Vector2(1067, -195)
 required_quest_id = ""
 
 [node name="Eventtriggers" type="Node2D" parent="." unique_id=115884441]
 
 [node name="evelyn_trigger1" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("7_2fllf")]
-position = Vector2(469, -198)
+position = Vector2(358, -194)
+event_id = "evelyn_trigger1"
 
 [node name="evelyn_trigger_2" parent="Eventtriggers" unique_id=710447600 instance=ExtResource("9_0pwf0")]
-position = Vector2(537, -198)
+position = Vector2(429, -200)
+event_id = "evelyn_trigger_2"
 required_quest_id = "back_to_office"
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_qwbcs")]
-position = Vector2(408, -277)
 
 [editable path="Doors/door_move"]
 [editable path="Doors/door_move2"]
+[editable path="Interactables/film_door"]
