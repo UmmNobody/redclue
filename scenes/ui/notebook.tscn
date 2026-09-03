@@ -20,7 +20,6 @@ offset_bottom = 180.0
 color = Color(0, 0, 0, 0.627451)
 
 [node name="QuestPage" type="Control" parent="." unique_id=1148532462]
-visible = false
 anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 180.0
@@ -32,6 +31,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_b8kqm")
 
 [node name="QuestTitle" type="Label" parent="QuestPage" unique_id=1247094738]
+custom_maximum_size = Vector2(70, -1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,30 +40,30 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -79.0
 offset_top = -22.0
-offset_right = 51.0
+offset_right = -9.0
 offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 8
 text = "QuestTitle"
-vertical_alignment = 1
 clip_text = true
 
 [node name="QuestDescription" type="RichTextLabel" parent="QuestPage" unique_id=1285480170]
-custom_maximum_size = Vector2(100, 90)
+custom_maximum_size = Vector2(100, -1)
 layout_mode = 0
-offset_left = 84.0
+offset_left = 82.0
 offset_top = 85.0
-offset_right = 145.0
+offset_right = 143.0
 offset_bottom = 167.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 4
+theme_override_font_sizes/normal_font_size = 6
 bbcode_enabled = true
 text = "test"
 scroll_active = false
 
 [node name="EvidencePage" type="Control" parent="." unique_id=2043309386]
+visible = false
 anchors_preset = 0
 offset_right = 288.0
 offset_bottom = 209.0
@@ -106,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 6
-text = "Previous"
+text = "< ก่อนหน้า"
 flat = true
 
 [node name="NextButton" type="Button" parent="EvidencePage" unique_id=650639645]
@@ -116,15 +116,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 68.0
-offset_top = 55.5
-offset_right = 93.0
-offset_bottom = 70.5
+offset_left = 69.0
+offset_top = 54.5
+offset_right = 94.0
+offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 6
-text = "Next
+text = "ถัดไป >
 "
 flat = true
 
@@ -136,13 +136,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -24.0
-offset_top = 59.5
+offset_top = 58.5
 offset_right = 12.0
-offset_bottom = 70.5
+offset_bottom = 69.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 4
+theme_override_font_sizes/font_size = 6
 text = "PageLabel"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -162,6 +162,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 6
 text = "Close"
+flat = true
 
 [node name="QuestTab" type="Button" parent="." unique_id=1223330550]
 layout_mode = 0

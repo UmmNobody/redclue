@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://c43888aw2v181" path="res://scenes/levels/ingridhouse.gd" id="1_516tb"]
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_qbwsh"]
-[ext_resource type="Texture2D" uid="uid://cev2hpy3noheb" path="res://assets/new_image/Ingrid_house_out/ingrid_house_out.png" id="2_516tb"]
-[ext_resource type="Texture2D" uid="uid://cafqs417xqppc" path="res://assets/new_image/Ingrid_house/ingrid_house_in.png" id="3_516tb"]
+[ext_resource type="Texture2D" uid="uid://cev2hpy3noheb" path="res://assets/maps/ingrid_house_out.png" id="2_516tb"]
+[ext_resource type="Texture2D" uid="uid://cafqs417xqppc" path="res://assets/maps/ingrid_house_in.png" id="3_516tb"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="3_iuhhv"]
 [ext_resource type="PackedScene" uid="uid://eofohd3noako" path="res://scenes/interacables/motorcycle.tscn" id="3_lk2kv"]
 [ext_resource type="Script" uid="uid://47gtxh40rdri" path="res://scripts/interaction/ingrid_door.gd" id="4_2dj6i"]
-[ext_resource type="Texture2D" uid="uid://cdcq3ydktra4r" path="res://assets/new_image/Ingrid_house_out/Doo-ingrid-hout-out.png" id="6_516tb"]
-[ext_resource type="Texture2D" uid="uid://d4hmdy40qw3cu" path="res://assets/new_image/Ingrid_house/Ingrid_house_Door.png" id="7_516tb"]
+[ext_resource type="Texture2D" uid="uid://cdcq3ydktra4r" path="res://assets/IObject/Doo-ingrid-hout-out.png" id="6_516tb"]
+[ext_resource type="Texture2D" uid="uid://d4hmdy40qw3cu" path="res://assets/IObject/Ingrid_house_Door.png" id="7_516tb"]
 [ext_resource type="PackedScene" uid="uid://ct00js10suatb" path="res://scenes/npc/ingrid.tscn" id="8_dlpyn"]
 [ext_resource type="PackedScene" uid="uid://ctb41nol6ovwj" path="res://scenes/triggers/ingrid_trigger_1.tscn" id="9_j0qma"]
 [ext_resource type="PackedScene" uid="uid://durj3ps4fy17w" path="res://scenes/triggers/ingrid_trigger_2.tscn" id="10_hs30n"]
@@ -83,7 +83,7 @@ shape = SubResource("RectangleShape2D_2dj6i")
 texture = ExtResource("6_516tb")
 
 [node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
-position = Vector2(834.25, -621)
+position = Vector2(834, -623)
 
 [node name="door_move2" parent="Doors" unique_id=116185118 instance=ExtResource("3_iuhhv")]
 position = Vector2(1041.25, -850)

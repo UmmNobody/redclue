@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" uid="uid://ci66cwscqkb58" path="res://scenes/levels/weissindustrial.gd" id="1_nebef"]
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_sxifc"]
-[ext_resource type="Texture2D" uid="uid://db6yv6pxx0mrn" path="res://assets/new_image/Weiss-Lobby/weiss-Lobby.png" id="2_378gb"]
-[ext_resource type="Texture2D" uid="uid://fhtq7qhv2orr" path="res://assets/new_image/Weiss-in-room/Weiss-in-room.png" id="3_5kf4u"]
+[ext_resource type="Texture2D" uid="uid://db6yv6pxx0mrn" path="res://assets/maps/weiss-Lobby.png" id="2_378gb"]
+[ext_resource type="Texture2D" uid="uid://fhtq7qhv2orr" path="res://assets/maps/Weiss-in-room.png" id="3_5kf4u"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="4_vvrmm"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="5_k5o8j"]
-[ext_resource type="Texture2D" uid="uid://n6rj5c1anbhu" path="res://assets/new_image/Weiss-Lobby/Door1-Weiss-lobby.png" id="5_mbi4t"]
+[ext_resource type="Texture2D" uid="uid://n6rj5c1anbhu" path="res://assets/IObject/Door1-Weiss-lobby.png" id="5_mbi4t"]
 [ext_resource type="PackedScene" uid="uid://cjvambbt54tpm" path="res://scenes/npc/receptionist.tscn" id="5_uwjxx"]
 [ext_resource type="PackedScene" uid="uid://cpb5e7hvxnli3" path="res://scenes/npc/conrad.tscn" id="6_k1pj6"]
-[ext_resource type="Texture2D" uid="uid://qhom8qyu55ka" path="res://assets/new_image/Weiss-in-room/Door-Weiss-inRoom.png" id="9_378gb"]
+[ext_resource type="Texture2D" uid="uid://qhom8qyu55ka" path="res://assets/IObject/Door-Weiss-inRoom.png" id="9_378gb"]
 [ext_resource type="PackedScene" uid="uid://dpuss1pgupatr" path="res://scenes/triggers/conrad_trigger_1.tscn" id="10_1mmcy"]
-[ext_resource type="Texture2D" uid="uid://cerqsuu5fqgt2" path="res://assets/new_image/Weiss-Lobby/Door2-weiss-lobby.png" id="10_378gb"]
+[ext_resource type="Texture2D" uid="uid://cerqsuu5fqgt2" path="res://assets/IObject/Door2-weiss-lobby.png" id="10_378gb"]
 [ext_resource type="PackedScene" uid="uid://bxksx5uwr0emp" path="res://scenes/triggers/conrad_trigger_2.tscn" id="11_hkhee"]
 [ext_resource type="PackedScene" uid="uid://baxjkndtkjcji" path="res://scenes/triggers/holm_trigger_2.tscn" id="11_nebef"]
 [ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="15_5kf4u"]
@@ -74,7 +74,7 @@ position = Vector2(-786, 11)
 [node name="Eventtriggers" type="Node2D" parent="." unique_id=416070284]
 
 [node name="conrad_trigger1" parent="Eventtriggers" unique_id=160060719 instance=ExtResource("10_1mmcy")]
-position = Vector2(1417, -246)
+position = Vector2(1431, -246)
 event_id = "conrad_trigger1"
 required_quest_id = "meet_conrad2"
 

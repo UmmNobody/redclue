@@ -1,6 +1,7 @@
 extends Interactable
 
 func _ready() -> void:
+	sprite.material = sprite.material.duplicate()
 	if not GameManager.phone_ring_played:
 			SfxManager.play_sfx("phone2")
 			GameManager.phone_ring_played = true

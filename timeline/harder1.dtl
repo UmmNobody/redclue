@@ -11,6 +11,8 @@ harder: "..."
 david: "นายลองไปที่ Halloway Apothecary ถนนสายเก่าริมแม่น้ำ เจ้าของชื่อ Petch เขารู้เรื่องพืชสมุนไพรมากที่สุด"
 david: "โอเค ขอบใจมาก Harder"
 harder: "ไม่เป็นไร"
+join c11 center [animation="Fade In Up"]
 คุณได้รับหลักฐานใหม่\
 - รายงานผลการวิเคราะห์ — Victor เสียชีวิตเพราะ Aconitine Poisoning วางยาในแก้วน้ำ
+leave c11 [animation="Fade Out Down"]
 [signal arg="get_evidence_c11"]

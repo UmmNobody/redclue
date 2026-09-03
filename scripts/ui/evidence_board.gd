@@ -10,6 +10,7 @@ const EVIDENCE_CARD = preload("res://scenes/ui/evidence_card.tscn")
 @onready var placed_cards: Control = $Board/PlacedCards
 @onready var board: Control = $Board
 @onready var culprit_sprite: Sprite2D = $Board/CulpritSprite
+@onready var connect_count_label: Label =  $ConnectCount	
 @onready var player: CharacterBody2D = get_tree().get_first_node_in_group("Player")
 
 # รายชื่อคู่หลักฐานที่ถูกต้อง (จับคู่สลับสลับซ้าย-ขวาได้)
@@ -18,7 +19,6 @@ var valid_pairs: Array = [
 	["C1", "C9"],
 	["C3", "C11"],
 	["C4", "C10"],
-	["C5", "C6"],
 	["C6", "C12"],
 	["C11", "C12"],
 ]
@@ -52,6 +52,7 @@ func _ready() -> void:
 	
 	_load_evidence_cards()
 	update_culprit_reveal()
+	update_connect_count_ui()
 
 func _process(_delta: float) -> void:
 	# อัปเดตตำแหน่งเส้นพรีวิวระหว่างลากเมาส์
@@ -69,6 +70,7 @@ func _process(_delta: float) -> void:
 
 func open() -> void:
 	player.set_movement_enabled(false)
+	show_connect_count_ui()
 	show()
 	
 func close() -> void:
@@ -147,6 +149,7 @@ func _create_permanent_line(card_a: EvidenceCard, card_b: EvidenceCard) -> void:
 	})
 	
 	update_culprit_reveal()
+	update_connect_count_ui()
 
 	if active_connections.size() >= valid_pairs.size():
 		board_completed.emit()
@@ -245,6 +248,17 @@ func update_culprit_reveal() -> void:
 	tween.tween_property(culprit_sprite, "modulate:a", target_alpha, 0.5)\
 		.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
+func update_connect_count_ui() -> void:
+	if connect_count_label:
+		var current_count: int = active_connections.size()
+		var total_pairs: int = valid_pairs.size()
+		connect_count_label.text = str(current_count) + "/" + str(total_pairs)
+
+func show_connect_count_ui() -> void:
+	if QuestManager.is_quest_completed("meet_petch"):
+		connect_count_label.show()
+	else:
+		connect_count_label.hide()
 
 func _on_close_button_pressed() -> void:
 	close()

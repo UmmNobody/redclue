@@ -110,9 +110,9 @@ variables={
 "ask_ingrid1": false,
 "short_message": ""
 }
-text/letter_speed=0.01
+text/letter_speed=0.02
 text/initial_text_reveal_skippable=true
-text/text_reveal_skip_delay=0.1
+text/text_reveal_skip_delay=0.5
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
 text/autoadvance_ignored_characters_enabled=true
@@ -143,11 +143,13 @@ audio/channel_defaults={
 }
 }
 audio/type_sound_bus="SFX"
+text/autoskip_time_per_event=0.1
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=180
+window/size/mode=3
 window/size/window_width_override=1600
 window/size/window_height_override=900
 window/stretch/mode="canvas_items"
@@ -167,6 +169,12 @@ EvidenceBoard=""
 MinigameConrad=""
 GameWinCutscene=""
 GameOverCutscene=""
+OptionsMenu=""
+Notebook=""
+
+[gui]
+
+theme/custom_font="uid://c5npmeuyubcg1"
 
 [input]
 

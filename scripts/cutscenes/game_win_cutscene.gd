@@ -13,4 +13,4 @@ func _dialogic_signal(argument: String) -> void :
 	if argument == "win_cutscene_end":
 		hide()
 		Dialogic.signal_event.disconnect(_dialogic_signal)
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/main.tscn")

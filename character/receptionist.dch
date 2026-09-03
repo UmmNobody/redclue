@@ -12,7 +12,7 @@
 },
 &"default_portrait": "",
 &"description": "",
-&"display_name": "Receptionist",
+&"display_name": "พนักงานต้อนรับ",
 &"mirror": false,
 &"nicknames": ["Receptionist"],
 &"offset": Vector2(0, 0),

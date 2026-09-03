@@ -10,15 +10,34 @@
 [ext_resource type="PackedScene" uid="uid://bd3ncbu568qxl" path="res://scenes/cutscenes/game_win_cutscene.tscn" id="8_53c65"]
 [ext_resource type="PackedScene" uid="uid://b4rs1jsbem5tu" path="res://scenes/cutscenes/game_over_cutscene.tscn" id="9_43bxi"]
 [ext_resource type="Texture2D" uid="uid://baobx1kwynqbr" path="res://assets/ui/UI Book close.png" id="10_j7gcg"]
+[ext_resource type="PackedScene" uid="uid://d3woxr0d3qloa" path="res://scenes/ui/OptionsMenu.tscn" id="11_qhwlw"]
+
+[sub_resource type="Gradient" id="Gradient_qhwlw"]
+offsets = PackedFloat32Array(0, 0.50751877, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.0714286, 0.0714286, 0.0714286, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3vrem"]
+gradient = SubResource("Gradient_qhwlw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="BaseLevel" type="Node2D" unique_id=1392396242]
 script = ExtResource("1_wwrw0")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=591599815]
+position = Vector2(320, 180)
+color = Color(0.37111905, 0.37111905, 0.37111905, 1)
 
 [node name="Player" parent="." unique_id=1666149047 instance=ExtResource("1_uk53i")]
 position = Vector2(160, 90)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1294006658]
 offset = Vector2(0, -20)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=1568485820]
+position = Vector2(1.4999943, 3.4999933)
+scale = Vector2(5.734375, 3.5468748)
+texture = SubResource("GradientTexture2D_3vrem")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=551747105]
 
@@ -27,7 +46,14 @@ offset_right = 320.0
 offset_bottom = 180.0
 texture = ExtResource("10_j7gcg")
 
-[node name="Notebook" parent="CanvasLayer" unique_id=1031771591 instance=ExtResource("2_ukglk")]
+[node name="NotebookButton" type="Button" parent="CanvasLayer" unique_id=382051986]
+offset_left = 8.0
+offset_top = 159.0
+offset_right = 114.0
+offset_bottom = 180.0
+flat = true
+
+[node name="Notebook" parent="CanvasLayer" unique_id=1031771591 groups=["Notebook"] instance=ExtResource("2_ukglk")]
 visible = false
 
 [node name="TeleportUi" parent="CanvasLayer" unique_id=671122715 instance=ExtResource("3_ukglk")]
@@ -48,12 +74,28 @@ visible = false
 [node name="GameOverCutscene" parent="CanvasLayer" unique_id=1316985411 instance=ExtResource("9_43bxi")]
 visible = false
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=543189042]
+[node name="ExitButton" type="Button" parent="CanvasLayer" unique_id=543189042]
 offset_left = 8.0
 offset_top = 6.0
 offset_right = 34.0
 offset_bottom = 23.0
-theme_override_font_sizes/font_size = 6
+theme_override_font_sizes/font_size = 8
 text = "Exit"
+flat = true
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[node name="SettingButton" type="Button" parent="CanvasLayer" unique_id=1844180711]
+offset_left = 38.0
+offset_top = 6.0
+offset_right = 64.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "Setting
+"
+flat = true
+
+[node name="OptionsMenu" parent="CanvasLayer" unique_id=1854564926 instance=ExtResource("11_qhwlw")]
+visible = false
+
+[connection signal="pressed" from="CanvasLayer/NotebookButton" to="." method="_on_notebook_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/SettingButton" to="." method="_on_setting_button_pressed"]

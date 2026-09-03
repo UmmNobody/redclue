@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_hj8mm"]
 [ext_resource type="Script" uid="uid://b614t7vr1buqj" path="res://scenes/levels/bar.gd" id="1_oxwfi"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="2_87w1v"]
-[ext_resource type="Texture2D" uid="uid://dmgtuijyaelgv" path="res://assets/new_image/Bar/bar_in.png" id="2_oxwfi"]
+[ext_resource type="Texture2D" uid="uid://dmgtuijyaelgv" path="res://assets/maps/bar_in.png" id="2_oxwfi"]
 [ext_resource type="PackedScene" uid="uid://cpguw5evh10br" path="res://scenes/interacables/elias.tscn" id="4_e6pxe"]
-[ext_resource type="Texture2D" uid="uid://dx4pg53lsic44" path="res://assets/new_image/Bar/Door-Bar.png" id="4_oxwfi"]
+[ext_resource type="Texture2D" uid="uid://dx4pg53lsic44" path="res://assets/IObject/Door-Bar.png" id="4_oxwfi"]
 [ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="7_ymslm"]
 
 [node name="Bar" type="Node2D" unique_id=125587422]
@@ -16,7 +16,7 @@ position = Vector2(460, -211)
 texture = ExtResource("2_oxwfi")
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=1992550569]
-position = Vector2(250, -185)
+position = Vector2(250, -186)
 
 [node name="Doors" type="Node2D" parent="." unique_id=1178633323]
 

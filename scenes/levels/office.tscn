@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://42rbxq73sos"]
 
-[ext_resource type="Texture2D" uid="uid://dudqwtiys5s3e" path="res://assets/new_image/Office/office.png" id="1_4m8q4"]
+[ext_resource type="Texture2D" uid="uid://dudqwtiys5s3e" path="res://assets/maps/office.png" id="1_4m8q4"]
 [ext_resource type="PackedScene" uid="uid://1s54wau3vd4k" path="res://scenes/interacables/sofa.tscn" id="2_ey3sf"]
 [ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="2_tuhfx"]
 [ext_resource type="PackedScene" uid="uid://bqey8mvoprmqf" path="res://scenes/interacables/telephone.tscn" id="3_1gkrr"]
@@ -64,11 +64,12 @@ required_completed_quest_id = "back_to_office"
 [node name="harder" type="Marker2D" parent="NPCPositions" unique_id=1652382233]
 position = Vector2(424, -99)
 
+[node name="harder2" type="Marker2D" parent="NPCPositions" unique_id=2107339579]
+
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("5_tuhfx")]
-position = Vector2(0, -180)
 
 [node name="InitialPlayerSpawn" type="Marker2D" parent="." unique_id=1664520335]
-position = Vector2(103, -95)
+position = Vector2(103, -99)
 
 [node name="TeleportSpawn" type="Marker2D" parent="." unique_id=101725155]
 position = Vector2(499, -99)

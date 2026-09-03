@@ -20,3 +20,19 @@ func _set_player_spawn() -> void:
 
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main.tscn")
+
+
+func _on_setting_button_pressed() -> void:
+	var option_menu = get_tree().get_first_node_in_group("OptionsMenu")
+	
+	if option_menu:
+		option_menu.open()
+
+
+func _on_notebook_button_pressed() -> void:
+	var notebook = get_tree().get_first_node_in_group("Notebook")
+	
+	if notebook:
+		notebook.open_notebook()
+	else:
+		print("not f")

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_oajp1"]
 [ext_resource type="Script" uid="uid://ldnm8ft7hn13" path="res://scripts/npc/petch.gd" id="2_6gy7v"]
-[ext_resource type="Texture2D" uid="uid://j1p2741brwlr" path="res://assets/new_image/Pharmacy/Howner.png" id="3_c8r2u"]
+[ext_resource type="Texture2D" uid="uid://j1p2741brwlr" path="res://assets/characters/Howner.png" id="3_c8r2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkhee"]
 

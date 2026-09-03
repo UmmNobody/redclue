@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://vxm1r8p0adbo" path="res://scripts/ui/options_menu.gd" id="1_85c7g"]
 [ext_resource type="Script" uid="uid://cufecfnaidll0" path="res://scripts/ui/audio_options.gd" id="2_uxfc2"]
 
-[node name="OptionsMenu" type="Control" unique_id=1854564926]
+[node name="OptionsMenu" type="Control" unique_id=1854564926 groups=["OptionsMenu"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 320.0

@@ -2,16 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_qwbcs"]
 [ext_resource type="Script" uid="uid://co50nchaieb07" path="res://scenes/levels/filmstore.gd" id="1_xv3uq"]
-[ext_resource type="Texture2D" uid="uid://domkh5xni5ifs" path="res://assets/new_image/Film-in/Flim_in.png" id="2_xv3uq"]
-[ext_resource type="Texture2D" uid="uid://d3txspaqgr6y6" path="res://assets/new_image/Film-insite-Room/film_inside_room.png" id="3_miewr"]
+[ext_resource type="Texture2D" uid="uid://domkh5xni5ifs" path="res://assets/maps/Flim_in.png" id="2_xv3uq"]
+[ext_resource type="Texture2D" uid="uid://bioacjcdv2fbn" path="res://assets/maps/film_inside_room.png" id="3_miewr"]
 [ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="4_4rp6g"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="4_ng1f6"]
-[ext_resource type="Texture2D" uid="uid://j3x6bx07kgij" path="res://assets/new_image/Film-in/Door2-Flim-in.png" id="5_4rp6g"]
+[ext_resource type="Texture2D" uid="uid://j3x6bx07kgij" path="res://assets/IObject/Door2-Flim-in.png" id="5_4rp6g"]
 [ext_resource type="PackedScene" uid="uid://7va0xckoknlo" path="res://scenes/interacables/office_door.tscn" id="6_oqj0i"]
 [ext_resource type="PackedScene" uid="uid://dapra0q72mylw" path="res://scenes/triggers/evelyn_trigger_1.tscn" id="7_2fllf"]
 [ext_resource type="PackedScene" uid="uid://gdg0tkxmv81k" path="res://scenes/npc/evelyn.tscn" id="7_7m8a1"]
 [ext_resource type="PackedScene" uid="uid://cuyws7nowmvb8" path="res://scenes/interacables/film_developer.tscn" id="7_fdok2"]
-[ext_resource type="Texture2D" uid="uid://dlvgsukr2n21k" path="res://assets/new_image/Film-in/Door-Flim-in.png" id="7_miewr"]
+[ext_resource type="Texture2D" uid="uid://dlvgsukr2n21k" path="res://assets/IObject/Door-Flim-in.png" id="7_miewr"]
 [ext_resource type="PackedScene" uid="uid://bq85bsm1t36oi" path="res://scenes/triggers/evelyn_trigger_2.tscn" id="9_0pwf0"]
 
 [node name="Filmstore" type="Node2D" unique_id=1143346515]
@@ -26,7 +26,7 @@ position = Vector2(1096, -206)
 texture = ExtResource("3_miewr")
 
 [node name="film3" type="Sprite2D" parent="." unique_id=623925097]
-position = Vector2(1128.5001, 47)
+position = Vector2(1619.0001, -188)
 scale = Vector2(1.1203706, 1)
 texture = ExtResource("3_miewr")
 

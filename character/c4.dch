@@ -19,7 +19,7 @@
 &"portraits": {
 "dafault": {
 "export_overrides": {
-"image": "\"res://assets/evidences_png/C-004.png\""
+"image": "\"res://assets/ui/C-004.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

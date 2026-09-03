@@ -80,7 +80,7 @@ height = 38.005337
 [node name="Player" type="CharacterBody2D" unique_id=1666149047 groups=["Player"]]
 collision_mask = 5
 script = ExtResource("1_8afob")
-move_speed = 300.0
+move_speed = 70.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1781558882]
 sprite_frames = SubResource("SpriteFrames_khjbv")

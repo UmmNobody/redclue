@@ -12,7 +12,6 @@ func _physics_process(_delta: float) -> void:
 	update_target()
 
 	if Input.is_action_just_pressed("interact"):
-		print("tried to interact")
 		interact_with_target()
 
 # =========================================
@@ -72,7 +71,6 @@ func update_target() -> void:
 			current_target.set_highlight(true)
 		
 		target_changed.emit(current_target)
-		print("Interactable found: ", current_target)
 
 # =========================================
 # Interact

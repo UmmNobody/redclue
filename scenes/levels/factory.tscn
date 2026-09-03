@@ -2,20 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://d4flnw41kufsl" path="res://scenes/levels/base_level.tscn" id="1_0ug24"]
 [ext_resource type="Script" uid="uid://b0nvujnt6wbqr" path="res://scenes/levels/factory.gd" id="1_vpo40"]
-[ext_resource type="Texture2D" uid="uid://c2hmichxutfbu" path="res://assets/new_image/Factory-back/fac_side.png" id="2_vpo40"]
+[ext_resource type="Texture2D" uid="uid://c2hmichxutfbu" path="res://assets/maps/fac_side.png" id="2_vpo40"]
 [ext_resource type="PackedScene" uid="uid://eofohd3noako" path="res://scenes/interacables/motorcycle.tscn" id="3_iuutr"]
-[ext_resource type="Texture2D" uid="uid://x3go3nnqvtbs" path="res://assets/new_image/Factory-F2-2/fac_f2-2.png" id="3_menmw"]
-[ext_resource type="Texture2D" uid="uid://blgvu83yfds2a" path="res://assets/new_image/Factory-F2-1/fac_f2-1.png" id="4_menmw"]
+[ext_resource type="Texture2D" uid="uid://x3go3nnqvtbs" path="res://assets/maps/fac_f2-2.png" id="3_menmw"]
+[ext_resource type="Texture2D" uid="uid://blgvu83yfds2a" path="res://assets/maps/fac_f2-1.png" id="4_menmw"]
 [ext_resource type="PackedScene" uid="uid://cxmk51t4dmurf" path="res://scenes/npc/enmund.tscn" id="4_vqp87"]
 [ext_resource type="PackedScene" uid="uid://ci7xtdbv00cis" path="res://scenes/triggers/enmund_trigger1.tscn" id="5_ffdlx"]
 [ext_resource type="PackedScene" uid="uid://dyplc285r2ova" path="res://scenes/interacables/door_move.tscn" id="5_ramhb"]
-[ext_resource type="Texture2D" uid="uid://d335vlpoj18e1" path="res://assets/new_image/Factory-F1/fac_f1_insite.png" id="5_vpo40"]
+[ext_resource type="Texture2D" uid="uid://d335vlpoj18e1" path="res://assets/maps/fac_f1_insite.png" id="5_vpo40"]
+[ext_resource type="Texture2D" uid="uid://b3gcg05tktanr" path="res://assets/characters/Double-police.png" id="6_n1sjn"]
 [ext_resource type="PackedScene" uid="uid://bmfbjadwuoj53" path="res://scenes/npc/wall.tscn" id="6_vpo40"]
-[ext_resource type="Texture2D" uid="uid://xckuun85y23t" path="res://assets/new_image/Factory-F1/Stair.png" id="7_vpo40"]
-[ext_resource type="Texture2D" uid="uid://lmepl70sqr7c" path="res://assets/new_image/Factory-F2-1/f2-Door.png" id="8_menmw"]
-[ext_resource type="Texture2D" uid="uid://cq6bbsigs5kwg" path="res://assets/new_image/Factory-F2-2/f2-2-Door.png" id="9_vpo40"]
+[ext_resource type="Texture2D" uid="uid://xckuun85y23t" path="res://assets/IObject/Stair.png" id="7_vpo40"]
+[ext_resource type="Texture2D" uid="uid://lmepl70sqr7c" path="res://assets/IObject/f2-Door.png" id="8_menmw"]
+[ext_resource type="Texture2D" uid="uid://cq6bbsigs5kwg" path="res://assets/IObject/f2-2-Door.png" id="9_vpo40"]
 [ext_resource type="PackedScene" uid="uid://bapafw2tt3w2b" path="res://scenes/interacables/deadbody.tscn" id="10_r0g5m"]
-[ext_resource type="Texture2D" uid="uid://e0sxtiygd0iv" path="res://assets/new_image/Factory-back/Factory-Back.png" id="11_n1sjn"]
+[ext_resource type="Texture2D" uid="uid://e0sxtiygd0iv" path="res://assets/IObject/Factory-Back.png" id="11_n1sjn"]
 [ext_resource type="PackedScene" uid="uid://b8fsvby1643ll" path="res://scenes/interacables/cup_pot.tscn" id="11_rbf27"]
 [ext_resource type="PackedScene" uid="uid://0fhul507ensg" path="res://scenes/interacables/file.tscn" id="12_bfwgj"]
 [ext_resource type="PackedScene" uid="uid://ygrbp7am7ynk" path="res://scenes/triggers/enmund_trigger2.tscn" id="12_w0abr"]
@@ -40,13 +41,30 @@ texture = ExtResource("2_vpo40")
 position = Vector2(2952, -234)
 texture = ExtResource("3_menmw")
 
+[node name="FacF23" type="Sprite2D" parent="Map" unique_id=1397805871]
+position = Vector2(2307, -236)
+scale = Vector2(0.75510204, 1)
+texture = ExtResource("3_menmw")
+
 [node name="FacF21" type="Sprite2D" parent="Map" unique_id=268476995]
 position = Vector2(1820, -235)
+texture = ExtResource("4_menmw")
+
+[node name="FacF24" type="Sprite2D" parent="Map" unique_id=1439557892]
+position = Vector2(333, 174)
+texture = ExtResource("4_menmw")
+
+[node name="FacF25" type="Sprite2D" parent="Map" unique_id=1471721530]
+position = Vector2(-67, -239)
 texture = ExtResource("4_menmw")
 
 [node name="FacF1" type="Sprite2D" parent="Map" unique_id=1267190507]
 position = Vector2(725, -237)
 texture = ExtResource("5_vpo40")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map" unique_id=839153337]
+position = Vector2(830, -206)
+texture = ExtResource("6_n1sjn")
 
 [node name="Walls" type="Node2D" parent="." unique_id=776243148]
 
@@ -66,7 +84,7 @@ position = Vector2(1980, -214)
 position = Vector2(792, 203)
 
 [node name="Wall6" parent="Walls" unique_id=703788036 instance=ExtResource("6_vpo40")]
-position = Vector2(1373, 203)
+position = Vector2(1070, 209)
 
 [node name="Wall7" parent="Walls" unique_id=436721840 instance=ExtResource("6_vpo40")]
 position = Vector2(2695, -199)
@@ -90,7 +108,7 @@ scale = Vector2(3.9871552, 4.4399934)
 shape = SubResource("RectangleShape2D_ramhb")
 
 [node name="Sprite2D" parent="Doors/door_move" index="1" unique_id=523219159]
-position = Vector2(0, -47)
+position = Vector2(2, -47)
 texture = ExtResource("7_vpo40")
 
 [node name="TeleportMarker" parent="Doors/door_move" index="2" unique_id=242310348]
@@ -107,7 +125,7 @@ position = Vector2(0, -52)
 texture = ExtResource("7_vpo40")
 
 [node name="TeleportMarker" parent="Doors/door_move2" index="2" unique_id=242310348]
-position = Vector2(-1201, 5)
+position = Vector2(-1264, 5)
 
 [node name="door_move3" parent="Doors" unique_id=1811503285 instance=ExtResource("5_ramhb")]
 position = Vector2(1971, -214)
@@ -119,7 +137,7 @@ scale = Vector2(-0.6381062, 1.9033155)
 texture = ExtResource("8_menmw")
 
 [node name="TeleportMarker" parent="Doors/door_move3" index="2" unique_id=242310348]
-position = Vector2(760, 22)
+position = Vector2(760, 25)
 
 [node name="door_move4" parent="Doors" unique_id=1359042269 instance=ExtResource("5_ramhb")]
 position = Vector2(2705, -197)
@@ -147,7 +165,7 @@ scale = Vector2(-0.6381062, 1.9033155)
 texture = ExtResource("11_n1sjn")
 
 [node name="TeleportMarker" parent="Doors/door_move5" index="2" unique_id=242310348]
-position = Vector2(-42, 418)
+position = Vector2(-42, 425)
 
 [node name="door_move6" parent="Doors" unique_id=662266889 instance=ExtResource("5_ramhb")]
 position = Vector2(884, 203)
@@ -170,12 +188,15 @@ required_quest_id = "meet_evelyn"
 [node name="enmund" parent="Interactables" unique_id=83249319 instance=ExtResource("4_vqp87")]
 position = Vector2(600, -201)
 
+[node name="Sprite2D" parent="Interactables/enmund" index="1" unique_id=523219159]
+position = Vector2(3, -1)
+
 [node name="QuestPosition_01" parent="Interactables/enmund/NPCPositionController" parent_id_path=PackedInt32Array(83249319, 418644336) index="0" unique_id=1806476944 node_paths=PackedStringArray("position_marker")]
 quest_id = "meet_enmund"
 position_marker = NodePath("../../../../NPCPositions/enmundFirst")
 
 [node name="deadbody" parent="Interactables" unique_id=1333905808 instance=ExtResource("10_r0g5m")]
-position = Vector2(2965, -172)
+position = Vector2(2940, -176)
 
 [node name="cup_pot" parent="Interactables" unique_id=366511046 instance=ExtResource("11_rbf27")]
 position = Vector2(2989, -199)
@@ -191,7 +212,7 @@ quest_id = "explore_room1"
 position_marker = NodePath("../../../../NPCPositions/holmFirst")
 
 [node name="garret" parent="Interactables" unique_id=510421296 instance=ExtResource("15_qlbif")]
-position = Vector2(788, -189)
+position = Vector2(781, -190)
 required_quest_id = "ask_garret"
 
 [node name="cigarette_stub" parent="Interactables" unique_id=2058115659 instance=ExtResource("18_47ka1")]
@@ -209,7 +230,7 @@ position = Vector2(2785, -185)
 event_id = "enmund_2_trigger"
 
 [node name="holm_trigger1" parent="Eventtriggers" unique_id=966666911 instance=ExtResource("15_jy0sh")]
-position = Vector2(1765, -206)
+position = Vector2(594, -199)
 event_id = "holm_trigger1"
 
 [node name="after_c6_trigger" parent="Eventtriggers" unique_id=756389352 instance=ExtResource("22_menmw")]
@@ -220,10 +241,10 @@ required_completed_quest_id = "check_side_factory"
 [node name="NPCPositions" type="Node2D" parent="." unique_id=230267361]
 
 [node name="enmundFirst" type="Marker2D" parent="NPCPositions" unique_id=389629004]
-position = Vector2(2830, -189)
+position = Vector2(2826, -192)
 
 [node name="holmFirst" type="Marker2D" parent="NPCPositions" unique_id=404900463]
-position = Vector2(1711, -202)
+position = Vector2(549, -201)
 
 [node name="BaseLevel" parent="." unique_id=1392396242 instance=ExtResource("1_0ug24")]
 

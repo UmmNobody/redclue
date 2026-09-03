@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://csar4h2be3vcs" path="res://scripts/ui/teleport_location_button.gd" id="1_cegrh"]
 [ext_resource type="Script" uid="uid://bw68j4rpp13on" path="res://scripts/ui/teleport_ui.gd" id="1_w0kvl"]
-[ext_resource type="Texture2D" uid="uid://bslfhjnddd1e3" path="res://assets/ui/UI_Map/Map.png" id="2_vka3t"]
-[ext_resource type="Texture2D" uid="uid://ddacm1spra5km" path="res://assets/ui/UI_Map/My office pin.png" id="3_bduma"]
-[ext_resource type="Texture2D" uid="uid://ch1x26drt4b12" path="res://assets/ui/UI_Map/Factory pin.png" id="5_62y7e"]
-[ext_resource type="Texture2D" uid="uid://cp73ef18bv5m2" path="res://assets/ui/UI_Map/Bar pin.png" id="6_2h2vo"]
-[ext_resource type="Texture2D" uid="uid://eer0pawoojdw" path="res://assets/ui/UI_Map/FilmStore pin.png" id="7_stwus"]
-[ext_resource type="Texture2D" uid="uid://bgnnyxi1vce8j" path="res://assets/ui/UI_Map/Ingrid House pin.png" id="8_1wyx7"]
-[ext_resource type="Texture2D" uid="uid://gx4bvtnorvq0" path="res://assets/ui/UI_Map/Weiss industrial pin.png" id="9_70xuc"]
-[ext_resource type="Texture2D" uid="uid://vmg53goa5iqs" path="res://assets/ui/UI_Map/Hallo way pin.png" id="10_jg5xb"]
+[ext_resource type="Texture2D" uid="uid://bslfhjnddd1e3" path="res://assets/ui/Map.png" id="2_vka3t"]
+[ext_resource type="Texture2D" uid="uid://ddacm1spra5km" path="res://assets/ui/My office pin.png" id="3_bduma"]
+[ext_resource type="Texture2D" uid="uid://ch1x26drt4b12" path="res://assets/ui/Factory pin.png" id="5_62y7e"]
+[ext_resource type="Texture2D" uid="uid://cp73ef18bv5m2" path="res://assets/ui/Bar pin.png" id="6_2h2vo"]
+[ext_resource type="Texture2D" uid="uid://eer0pawoojdw" path="res://assets/ui/FilmStore pin.png" id="7_stwus"]
+[ext_resource type="Texture2D" uid="uid://bgnnyxi1vce8j" path="res://assets/ui/Ingrid House pin.png" id="8_1wyx7"]
+[ext_resource type="Texture2D" uid="uid://gx4bvtnorvq0" path="res://assets/ui/Weiss industrial pin.png" id="9_70xuc"]
+[ext_resource type="Texture2D" uid="uid://vmg53goa5iqs" path="res://assets/ui/Hallo way pin.png" id="10_jg5xb"]
 
 [node name="TeleportUi" type="Control" unique_id=671122715 groups=["TeleportUI"]]
 layout_mode = 3

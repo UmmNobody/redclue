@@ -11,6 +11,8 @@ garret: "ประตูทางเข้าหลักมันไม่ไ�
 garret: "และก็กลิ่นระหว่างขึ้นเดินบันได"
 david: "กลิ่นอะไร"
 garret: "กลิ่นคล้ายควัน แต่ไม่ใช่ควันไฟ เป็นกลิ่นบางๆ อ่อนมาก แต่ไม่นานกลิ่นก็หายไปแล้ว"
+join c5 center [animation="Fade In Up"]
 คุณได้รับหลักฐานใหม่\
 - คำให้การ Garret — ประตูไม่ล็อค และกลิ่นปริศนา
+leave c5 [animation="Fade Out Down"]
 [signal arg="get_evidence_c5"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_7xlr8"]
 [ext_resource type="Script" uid="uid://cnnsxmfrb4cws" path="res://scripts/npc/garret.gd" id="2_yuece"]
-[ext_resource type="Texture2D" uid="uid://3d6kaipr70uk" path="res://assets/new_image/Factory-F1/Gerrat.png" id="3_ldnqd"]
+[ext_resource type="Texture2D" uid="uid://3d6kaipr70uk" path="res://assets/characters/Gerrat.png" id="3_ldnqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w55pc"]
 

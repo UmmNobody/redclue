@@ -1,6 +1,7 @@
 extends Interactable
 
 func _ready() -> void:
+	sprite.material = sprite.material.duplicate()
 	var evidence_board = get_tree().get_first_node_in_group("EvidenceBoard")
 	evidence_board.correct_pair_found.connect(_on_correct_pair_found)
 	evidence_board.board_completed.connect(_on_board_completed)

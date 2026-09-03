@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_t0v1y"]
 [ext_resource type="Script" uid="uid://byl70ibvdy6jl" path="res://scripts/interaction/cigarette_stub.gd" id="2_skmpm"]
-[ext_resource type="Texture2D" uid="uid://dwv6lkbdbdmqy" path="res://assets/new_image/Factory-back/Sigallate9.png" id="3_2sdu2"]
+[ext_resource type="Texture2D" uid="uid://dwv6lkbdbdmqy" path="res://assets/IObject/Sigallate9.png" id="3_2sdu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpebr"]
 

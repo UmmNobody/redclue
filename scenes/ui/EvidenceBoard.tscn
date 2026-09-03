@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://niql73s8sgai"]
 
 [ext_resource type="Script" uid="uid://seh8q00vn2r6" path="res://scripts/ui/evidence_board.gd" id="1_o68sj"]
-[ext_resource type="Texture2D" uid="uid://bofn0mdanaeqi" path="res://assets/evidences_png/Conrad-Image.png" id="2_q3hc6"]
+[ext_resource type="Texture2D" uid="uid://bofn0mdanaeqi" path="res://assets/ui/Conrad-Image.png" id="2_q3hc6"]
 [ext_resource type="Texture2D" uid="uid://dnpsul1o4uqwh" path="res://assets/ui/Board.png" id="2_v5ke0"]
 
 [node name="EvidenceBoard" type="Control" unique_id=1314747732]
@@ -10,21 +10,6 @@ anchors_preset = 0
 offset_right = 320.0
 offset_bottom = 180.0
 script = ExtResource("1_o68sj")
-
-[node name="bg" type="TextureRect" parent="." unique_id=1971415087]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -320.0
-offset_top = -180.0
-offset_right = 320.0
-offset_bottom = 180.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_v5ke0")
 
 [node name="Board" type="Control" parent="." unique_id=578140018]
 custom_minimum_size = Vector2(640, 360)
@@ -40,6 +25,21 @@ offset_right = 320.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="Board" unique_id=1971415087]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v5ke0")
 
 [node name="PlacedCards" type="Control" parent="Board" unique_id=593245307]
 custom_minimum_size = Vector2(600, 320)
@@ -57,8 +57,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CulpritSprite" type="Sprite2D" parent="Board" unique_id=59039727]
+modulate = Color(1, 0.7647059, 0.7647059, 1)
 position = Vector2(319, 173)
-scale = Vector2(0.8, 0.8)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_q3hc6")
 
 [node name="Hand" type="Control" parent="." unique_id=1388464959]
@@ -86,12 +87,33 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -34.0
-offset_top = 10.0
-offset_right = -8.0
-offset_bottom = 25.0
+offset_left = -37.0
+offset_top = 9.0
+offset_right = -11.0
+offset_bottom = 32.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
 text = "Close"
+flat = true
+
+[node name="ConnectCount" type="Label" parent="." unique_id=1626628956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -76.0
+offset_right = 20.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "0/6"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Evidence" format=3 uid="uid://bl5h2hljixudx"]
 
-[ext_resource type="Texture2D" uid="uid://botl1en1p8k13" path="res://assets/evidences_png/C-009.png" id="1_amcfr"]
+[ext_resource type="Texture2D" uid="uid://botl1en1p8k13" path="res://assets/ui/C-009.png" id="1_amcfr"]
 [ext_resource type="Script" uid="uid://cje680fcrh0bk" path="res://scripts/evidence/evidence.gd" id="2_t0xhe"]
 
 [resource]

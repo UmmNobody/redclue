@@ -27,7 +27,8 @@ func _ready() -> void:
 	previous_button.pressed.connect(_previous_evidence_page)
 	next_button.pressed.connect(_next_evidence_page)
 
-	_show_quest_page()
+	quest_page.show()
+	evidence_page.hide()
 
 # Notebook
 

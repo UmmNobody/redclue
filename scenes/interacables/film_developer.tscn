@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxldtmtmrkvpx" path="res://scenes/interacables/interactable.tscn" id="1_v8cb8"]
 [ext_resource type="Script" uid="uid://dq8gvatlhd3qr" path="res://scripts/interaction/film_developer.gd" id="2_7a5pw"]
-[ext_resource type="Texture2D" uid="uid://pykg7c4mx276" path="res://assets/new_image/Film-insite-Room/Tad-Film-inside-room.png" id="3_wx3fr"]
+[ext_resource type="Texture2D" uid="uid://pykg7c4mx276" path="res://assets/IObject/Tad-Film-inside-room.png" id="3_wx3fr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7m8a1"]
 
